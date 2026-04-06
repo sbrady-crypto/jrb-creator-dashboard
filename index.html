@@ -218,15 +218,45 @@ function getFilteredCreators() {
   const pDaily = filterByDate(PARTNERSHIP_DAILY, activeRange);
   const dates = new Set(pDaily.map(d=>d.date));
   return CREATORS.map(c => {
-    if (activeRange === 'all') return c;
+    const totalCost = c.total_cost || c.content_fee || 0;
+    if (activeRange === 'all') {
+      // Recalculate content efficiency using total cost (content fee + renewals)
+      // If amortization window is over, use full total cost
+      const effCost = (totalCost > 0 && c.amortized > 0) ? c.amortized : totalCost;
+      const eff = c.spend > 0 ? (effCost / c.spend * 100) : 0;
+      const status = eff <= 0 ? 'green' : eff < 10 ? 'green' : eff < 25 ? 'yellow' : 'red';
+      return { ...c, content_efficiency: eff, status };
+    }
     const cDaily = (c.daily||[]).filter(d => dates.has(d.date));
     const spend = cDaily.reduce((s,d)=>s+(d.spend||0),0);
     const purchases = cDaily.reduce((s,d)=>s+(d.purchases||0),0);
     const revenue = cDaily.reduce((s,d)=>s+(d.revenue||0),0);
+    // For date-filtered view, compute amortized cost for the period
+    let amortized = 0;
+    if (totalCost > 0 && c.launch_date) {
+      const launch = new Date(c.launch_date);
+      const windowEnd = new Date(launch); windowEnd.setDate(windowEnd.getDate() + 30);
+      const periodDates = cDaily.map(d => new Date(d.date)).sort((a,b)=>a-b);
+      if (periodDates.length > 0) {
+        const pStart = periodDates[0]; const pEnd = periodDates[periodDates.length-1];
+        const overlapStart = new Date(Math.max(pStart, launch));
+        const overlapEnd = new Date(Math.min(pEnd, windowEnd));
+        if (overlapEnd >= overlapStart) {
+          const days = Math.round((overlapEnd - overlapStart) / 86400000) + 1;
+          amortized = days * (totalCost / 30);
+        }
+        // If past window, full cost is amortized
+        if (pStart > windowEnd) amortized = totalCost;
+      }
+    }
+    const effCost = amortized > 0 ? amortized : totalCost;
+    const eff = spend > 0 && totalCost > 0 ? (effCost / spend * 100) : 0;
+    const status = eff <= 0 ? 'green' : eff < 10 ? 'green' : eff < 25 ? 'yellow' : 'red';
     return { ...c, spend, purchases, revenue,
       roas: spend ? revenue/spend : 0,
       cpa: purchases ? spend/purchases : 0,
-      days_live: cDaily.length };
+      days_live: cDaily.length,
+      amortized: amortized, content_efficiency: eff, status };
   }).filter(c => c.spend > 0);
 }
 
