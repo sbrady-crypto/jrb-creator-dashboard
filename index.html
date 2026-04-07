@@ -362,22 +362,35 @@ function renderCreatorTable() {
       const statusLabel = `<span style="font-size:10px;color:var(--dark-light)">${numAds} ad${numAds!==1?'s':''} · launched ${job.launch_date||'--'}</span>`;
       html += `<tr class="ad-row job-group-${i}" style="${rowStyle}" ${clickAttr}>
         <td style="padding-left:20px">${expandBtn}</td>
-        <td colspan="2"><strong style="color:${inactive?'var(--dark-light)':'var(--gold)'}">${job.job_code}</strong> · ${job.product||'--'} · ${job.persona||'--'}${inactiveTag}<br>${statusLabel}</td>
-        <td>${inactive?'--':fmt$(job.spend)}</td><td>${inactive?'--':job.purchases}</td>
+        <td><strong style="color:${inactive?'var(--dark-light)':'var(--gold)'}">${job.job_code}</strong> · ${job.product||'--'} · ${job.persona||'--'}${inactiveTag}<br>${statusLabel}</td>
+        <td>${inactive?'--':fmt$(job.spend)}</td>
+        <td>${inactive?'--':job.purchases}</td>
         <td>${inactive?'--':`<span style="font-weight:600;color:${jRoas>=1?'var(--green)':'var(--red)'}">` + fmtX(jRoas) + '</span>'}</td>
-        <td>${inactive?'--':fmt$2(job.cpa)}</td><td colspan="2"></td>
-        <td>${job.content_cost?fmt$(job.content_cost):'--'}</td><td>${job.renewal_cost?fmt$(job.renewal_cost):'--'}</td><td>${job.total_cost?fmt$(job.total_cost):'--'}</td><td></td><td>${inactive?'--':(job.total_cost?fmtP(jEff):'--')}</td>
-        <td></td><td>${jSc?`<span class="status-dot ${jSc}"></span>`:''}</td>
+        <td>${inactive?'--':fmt$2(job.cpa)}</td>
+        <td>${inactive?'--':fmt$2(job.cpm||0)}</td>
+        <td>${inactive?'--':fmtP(job.ctr||0)}</td>
+        <td>${job.content_cost?fmt$(job.content_cost):'--'}</td>
+        <td>${job.renewal_cost?fmt$(job.renewal_cost):'--'}</td>
+        <td>${job.total_cost?fmt$(job.total_cost):'--'}</td>
+        <td></td>
+        <td>${job.total_cost?fmtP(jEff):'--'}</td>
+        <td></td>
+        <td>${jSc?`<span class="status-dot ${jSc}"></span>`:''}</td>
       </tr>`;
       // Ad-level rows under this job
       (job.ads||[]).forEach(ad => {
         const label = parseAdLabel(ad.ad_name);
         const adRoas = ad.roas||0;
         html += `<tr class="ad-row ad-sub-${i}-${j}" style="display:none">
-          <td></td><td colspan="2" style="font-size:10px;padding-left:40px;color:var(--dark-light)">${label}</td>
-          <td style="font-size:11px">${fmt$(ad.spend)}</td><td style="font-size:11px">${ad.purchases}</td>
+          <td></td>
+          <td style="font-size:10px;padding-left:40px;color:var(--dark-light)">${label}</td>
+          <td style="font-size:11px">${fmt$(ad.spend)}</td>
+          <td style="font-size:11px">${ad.purchases}</td>
           <td style="font-size:11px;color:${adRoas>=1?'var(--green)':'var(--red)'}">${fmtX(adRoas)}</td>
-          <td style="font-size:11px">${fmt$2(ad.cpa)}</td><td colspan="2" style="font-size:10px">${ad.product}</td><td colspan="6"></td>
+          <td style="font-size:11px">${fmt$2(ad.cpa)}</td>
+          <td style="font-size:11px">${ad.cpm?fmt$2(ad.cpm):'--'}</td>
+          <td style="font-size:11px">${ad.ctr?fmtP(ad.ctr):'--'}</td>
+          <td colspan="7" style="font-size:10px;color:var(--dark-light)">${ad.product||''}</td>
         </tr>`;
       });
     });
