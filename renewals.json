@@ -1,0 +1,27 @@
+{
+  "allisonkelleyy": {
+    "total_renewal_fee": 6500.0,
+    "renewal_status": "Renewed",
+    "renewal_date": "10/17"
+  },
+  "ellenorkim": {
+    "total_renewal_fee": 4000.0,
+    "renewal_status": "Renewed",
+    "renewal_date": ""
+  },
+  "pardonmuahinsta": {
+    "total_renewal_fee": 2700.0,
+    "renewal_status": "Renewed",
+    "renewal_date": "1/16"
+  },
+  "paleomg": {
+    "total_renewal_fee": 1000.0,
+    "renewal_status": "",
+    "renewal_date": ""
+  },
+  "jadelizroper": {
+    "total_renewal_fee": 3000.0,
+    "renewal_status": "",
+    "renewal_date": ""
+  }
+}

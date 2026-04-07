@@ -1,0 +1,3536 @@
+{
+  "emilydidonato": [
+    {
+      "job_code": "M036",
+      "content_cost": 3000.0,
+      "launch_date": "3/28",
+      "product": "MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "M035",
+      "content_cost": 3000.0,
+      "launch_date": "3/28",
+      "product": "MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "J075",
+      "content_cost": 3000.0,
+      "launch_date": "9/4",
+      "product": "MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "BB016",
+      "content_cost": 3000.0,
+      "launch_date": "10/2",
+      "product": "BobbiKit5",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC037",
+      "content_cost": 3000.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC062",
+      "content_cost": 3000.0,
+      "launch_date": "11/18",
+      "product": "Holiday Kit - MB",
+      "agency": "Internal",
+      "persona": "LuxuryForLess",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "DR017",
+      "content_cost": 3000.0,
+      "launch_date": "1/15/26",
+      "product": "Dusty Rose Kit",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M283",
+      "content_cost": 3000.0,
+      "launch_date": "2/5/26",
+      "product": "MB",
+      "agency": "Internal",
+      "persona": "SkincareFocus",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "DR019",
+      "content_cost": 3000.0,
+      "launch_date": "2/5/26",
+      "product": "Dusty Rose Kit",
+      "agency": "Internal",
+      "persona": "BeautyNovice",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "ES022",
+      "content_cost": 3000.0,
+      "launch_date": "2/10/26",
+      "product": "Eye Shadow Stick",
+      "agency": "Internal",
+      "persona": "General",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "tonyamichelle26": [
+    {
+      "job_code": "W013",
+      "content_cost": 1500.0,
+      "launch_date": "4/7",
+      "product": "WTF",
+      "agency": "Internal",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "W012",
+      "content_cost": 1500.0,
+      "launch_date": "4/7",
+      "product": "WTF",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "J086",
+      "content_cost": 1500.0,
+      "launch_date": "9/18",
+      "product": "JETM",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "BB015",
+      "content_cost": 1500.0,
+      "launch_date": "10/2",
+      "product": "BobbiKit5",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC056",
+      "content_cost": 3000.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M266",
+      "content_cost": 1500.0,
+      "launch_date": "01/09/2026",
+      "product": "MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jacqgould": [
+    {
+      "job_code": "M187",
+      "content_cost": 850.0,
+      "launch_date": "08/21",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Storyboard",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "nextwithnita": [
+    {
+      "job_code": "RHM183",
+      "content_cost": 2000.0,
+      "launch_date": "9/4",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM291",
+      "content_cost": 2500.0,
+      "launch_date": "11/21",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "BeautyNovice",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "shenaegrimesbeech": [
+    {
+      "job_code": "M185",
+      "content_cost": 4000.0,
+      "launch_date": "9/5",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM206",
+      "content_cost": 4000.0,
+      "launch_date": "9/25",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "GL004",
+      "content_cost": 2500.0,
+      "launch_date": "10/2",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM264",
+      "content_cost": 2500.0,
+      "launch_date": "11/4",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "BC052",
+      "content_cost": 6000.0,
+      "launch_date": "01/29",
+      "product": "BODY",
+      "agency": "Superbloom",
+      "persona": "SkincareEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "allisonkelleyy": [
+    {
+      "job_code": "RHM178",
+      "content_cost": 500.0,
+      "launch_date": "9/11",
+      "product": "MB",
+      "agency": "Rickhouse",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 6500.0,
+      "renewal_status": "Renewed",
+      "status": "Active"
+    },
+    {
+      "job_code": "W035",
+      "content_cost": 500.0,
+      "launch_date": "9/11",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "WindowShopping",
+      "renewal_cost": 0,
+      "renewal_status": "Renewed",
+      "status": "Active"
+    },
+    {
+      "job_code": "RHM290",
+      "content_cost": 2000.0,
+      "launch_date": "11/18",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "DR015",
+      "content_cost": 3000.0,
+      "launch_date": "01/29",
+      "product": "Dusty Rose Kit",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M318",
+      "content_cost": 3000.0,
+      "launch_date": "03/05",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Natural Look",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "alanahosn": [
+    {
+      "job_code": "RHM186",
+      "content_cost": 500.0,
+      "launch_date": "9/25",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "WindowShopping",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M219",
+      "content_cost": 1000.0,
+      "launch_date": "10/9",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M235",
+      "content_cost": 0.0,
+      "launch_date": "10/30",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "WindowShopping",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "ellenorkim": [
+    {
+      "job_code": "M215",
+      "content_cost": 4500.0,
+      "launch_date": "9/25",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 2000.0,
+      "renewal_status": "Renewed",
+      "status": "Paused"
+    },
+    {
+      "job_code": "BB032",
+      "content_cost": 3000.0,
+      "launch_date": "10/30",
+      "product": "BobbiKit5",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM276",
+      "content_cost": 0.0,
+      "launch_date": "11/21",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 2000.0,
+      "renewal_status": "Renewed",
+      "status": "Active"
+    },
+    {
+      "job_code": "HS042",
+      "content_cost": 3250.0,
+      "launch_date": "11/28",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC106",
+      "content_cost": 1625.0,
+      "launch_date": "12/25",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "WindowShopping",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "BC036",
+      "content_cost": 7500.0,
+      "launch_date": "01/15/2026",
+      "product": "BODY",
+      "agency": "Superbloom",
+      "persona": "SkincareEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "mamajotes": [
+    {
+      "job_code": "RHM201",
+      "content_cost": 1600.0,
+      "launch_date": "9/25",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "SkincareEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "twopeasinablog": [
+    {
+      "job_code": "RHM204",
+      "content_cost": 0,
+      "launch_date": "9/25",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "mommyinheels": [
+    {
+      "job_code": "RHM203",
+      "content_cost": 1129.0,
+      "launch_date": "9/25",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "SkinSolutionist",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM231",
+      "content_cost": 1129.0,
+      "launch_date": "10/30",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "beckyrmoss": [
+    {
+      "job_code": "M225",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "MB",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "anniejaffrey": [
+    {
+      "job_code": "M264",
+      "content_cost": 0.0,
+      "launch_date": "01/29",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "HypeReel",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M277",
+      "content_cost": 2000.0,
+      "launch_date": "01/29",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "bjonesstyle": [
+    {
+      "job_code": "J095",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "BB022",
+      "content_cost": 1000.0,
+      "launch_date": "10/10",
+      "product": "BobbiKit5",
+      "agency": "Agentio",
+      "persona": "BeautyEnthusiast",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "blairblogs": [
+    {
+      "job_code": "M226",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "MB",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "J096",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "christenebarberich": [
+    {
+      "job_code": "M213",
+      "content_cost": 2000.0,
+      "launch_date": "10/2",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jazminegarcia": [
+    {
+      "job_code": "L020",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "ClassicLip",
+      "agency": "Agentio",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "julie_khuu": [
+    {
+      "job_code": "J100",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "lucy_lumen": [
+    {
+      "job_code": "J097",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "msgoldgirl": [
+    {
+      "job_code": "J087",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "graymatsen": [
+    {
+      "job_code": "L021",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "ClassicLip",
+      "agency": "Agentio",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "graceinmyspace": [
+    {
+      "job_code": "J098",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "torimasters": [
+    {
+      "job_code": "J099",
+      "content_cost": 1000.0,
+      "launch_date": "10/2",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "isabelledelceaa": [
+    {
+      "job_code": "RHM244",
+      "content_cost": 1300.0,
+      "launch_date": "10/3",
+      "product": "BobbiKit",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "thespoiledhome": [
+    {
+      "job_code": "BB018",
+      "content_cost": 2000.0,
+      "launch_date": "10/6",
+      "product": "BobbiKit5",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM228",
+      "content_cost": 2000.0,
+      "launch_date": "10/17",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "SkincareEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jasminejade": [
+    {
+      "job_code": "BB019",
+      "content_cost": 1000.0,
+      "launch_date": "10/7",
+      "product": "BobbiKit5",
+      "agency": "Agentio",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "carriesclosetdiary": [
+    {
+      "job_code": "W042",
+      "content_cost": 750.0,
+      "launch_date": "01/22",
+      "product": "",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "shannonmcmu": [
+    {
+      "job_code": "BB020",
+      "content_cost": 1300.0,
+      "launch_date": "10/8",
+      "product": "BobbiKit5",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "blakehealey": [
+    {
+      "job_code": "M216",
+      "content_cost": 2000.0,
+      "launch_date": "10/9",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jackiewyers": [
+    {
+      "job_code": "L028",
+      "content_cost": 1000.0,
+      "launch_date": "10/9",
+      "product": "ClassicLip",
+      "agency": "Agentio",
+      "persona": "BeautyEnthusiast",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "kyrareneevlogs": [
+    {
+      "job_code": "M228",
+      "content_cost": 1000.0,
+      "launch_date": "10/9",
+      "product": "MB",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "ssssamanthaa": [
+    {
+      "job_code": "L034",
+      "content_cost": 1000.0,
+      "launch_date": "10/9",
+      "product": "ClassicLip",
+      "agency": "Agentio",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "J109",
+      "content_cost": 1000.0,
+      "launch_date": "10/23",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M238",
+      "content_cost": 1000.0,
+      "launch_date": "11/4",
+      "product": "MB",
+      "agency": "Agentio",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "t.beaston": [
+    {
+      "job_code": "M227",
+      "content_cost": 1000.0,
+      "launch_date": "10/9",
+      "product": "MB",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "J110",
+      "content_cost": 1000.0,
+      "launch_date": "10/23",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "blairwalnuts": [
+    {
+      "job_code": "BB027",
+      "content_cost": 1000.0,
+      "launch_date": "10/14",
+      "product": "BobbiKit5",
+      "agency": "Agentio",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "miss_rissaann": [
+    {
+      "job_code": "RHM229",
+      "content_cost": 0.0,
+      "launch_date": "10/16",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "houseofabbie": [
+    {
+      "job_code": "M222",
+      "content_cost": 375.0,
+      "launch_date": "10/17",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M223",
+      "content_cost": 375.0,
+      "launch_date": "10/23",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC044",
+      "content_cost": 500.0,
+      "launch_date": "11/18",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "LuxuryForLess",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "BC040",
+      "content_cost": 1000.0,
+      "launch_date": "02/12",
+      "product": "BODY",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "pardonmuahinsta": [
+    {
+      "job_code": "RHM232",
+      "content_cost": 2000.0,
+      "launch_date": "10/17",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 2700.0,
+      "renewal_status": "Renewed",
+      "status": "Active"
+    }
+  ],
+  "ashley_dcooney": [
+    {
+      "job_code": "RHM230",
+      "content_cost": 2000.0,
+      "launch_date": "10/17",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "j.cathell": [
+    {
+      "job_code": "M217",
+      "content_cost": 1500.0,
+      "launch_date": "10/17",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "mikalamacfadzen": [
+    {
+      "job_code": "J102",
+      "content_cost": 300.0,
+      "launch_date": "10/17",
+      "product": "MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "taylorwalkerfit": [
+    {
+      "job_code": "L022",
+      "content_cost": 5500.0,
+      "launch_date": "10/23",
+      "product": "ClassicLip",
+      "agency": "Internal",
+      "persona": "HealthEnthusiast",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC025",
+      "content_cost": 3000.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - Lip",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M243",
+      "content_cost": 3000.0,
+      "launch_date": "11/21",
+      "product": "Mini MB",
+      "agency": "Internal",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "veeshoney": [
+    {
+      "job_code": "M229",
+      "content_cost": 500.0,
+      "launch_date": "10/23",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "theluxilook": [
+    {
+      "job_code": "J114",
+      "content_cost": 3000.0,
+      "launch_date": "10/30",
+      "product": "JETM",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "crimsonmitchell": [
+    {
+      "job_code": "M232",
+      "content_cost": 1500.0,
+      "launch_date": "10/30",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "pinkerbel": [
+    {
+      "job_code": "M230",
+      "content_cost": 100.0,
+      "launch_date": "10/30",
+      "product": "JETM",
+      "agency": "Aspire",
+      "persona": "HealthEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M271",
+      "content_cost": 100.0,
+      "launch_date": "12/25",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "J125",
+      "content_cost": 100.0,
+      "launch_date": "2/5/26",
+      "product": "JETM",
+      "agency": "Aspire",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "kristen_squires": [
+    {
+      "job_code": "J113",
+      "content_cost": 200.0,
+      "launch_date": "10/30",
+      "product": "JETM",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M233",
+      "content_cost": 200.0,
+      "launch_date": "10/30",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "lauraurquhartt": [
+    {
+      "job_code": "J112",
+      "content_cost": 625.0,
+      "launch_date": "10/30",
+      "product": "JETM",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M231",
+      "content_cost": 625.0,
+      "launch_date": "10/30",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "bilingualcoco": [
+    {
+      "job_code": "M234",
+      "content_cost": 2500.0,
+      "launch_date": "10/30",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "monicagrayce": [
+    {
+      "job_code": "BB031",
+      "content_cost": 400.0,
+      "launch_date": "10/30",
+      "product": "BobbiKit5",
+      "agency": "Internal",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "thelovedesignedlife": [
+    {
+      "job_code": "M236",
+      "content_cost": 600.0,
+      "launch_date": "10/30",
+      "product": "MB",
+      "agency": "Superfiliate",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "J115",
+      "content_cost": 600.0,
+      "launch_date": "10/30",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "annabdaly": [
+    {
+      "job_code": "BB038",
+      "content_cost": 2250.0,
+      "launch_date": "11/4",
+      "product": "BobbiKit5",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "W054",
+      "content_cost": 4500.0,
+      "launch_date": "03/05",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "healthysahm": [
+    {
+      "job_code": "BB033",
+      "content_cost": 400.0,
+      "launch_date": "11/4",
+      "product": "BobbiKit5",
+      "agency": "Internal",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "daniellenhutchinson": [
+    {
+      "job_code": "M240",
+      "content_cost": 417.0,
+      "launch_date": "11/4",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jaskyguillermo": [
+    {
+      "job_code": "M239",
+      "content_cost": 433.0,
+      "launch_date": "11/4",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "BeautyNovice",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "whatlolalikes": [
+    {
+      "job_code": "RHM260",
+      "content_cost": 1750.0,
+      "launch_date": "11/4",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "whitehairwisdom": [
+    {
+      "job_code": "BB040",
+      "content_cost": 4500.0,
+      "launch_date": "11/4",
+      "product": "BobbiKit5",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM281",
+      "content_cost": 4500.0,
+      "launch_date": "11/21",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M242",
+      "content_cost": 4500.0,
+      "launch_date": "11/21",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC117",
+      "content_cost": 4500.0,
+      "launch_date": "01/13/2026",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "EducationalInformational",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "mariahclayton_": [
+    {
+      "job_code": "BB037",
+      "content_cost": 900.0,
+      "launch_date": "11/4",
+      "product": "BobbiKit5",
+      "agency": "Internal",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "maxeygreene": [
+    {
+      "job_code": "RHM261",
+      "content_cost": 400.0,
+      "launch_date": "11/4",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "FashionEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "saramedmondson": [
+    {
+      "job_code": "RHM263",
+      "content_cost": 500.0,
+      "launch_date": "11/4",
+      "product": "JETM",
+      "agency": "Superfiliate",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM267",
+      "content_cost": 500.0,
+      "launch_date": "11/4",
+      "product": "FP",
+      "agency": "Superfiliate",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "hernaturalway": [
+    {
+      "job_code": "RHM265",
+      "content_cost": 300.0,
+      "launch_date": "11/4",
+      "product": "JETM",
+      "agency": "Internal",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "erekav": [
+    {
+      "job_code": "HC051",
+      "content_cost": 8500.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - Party",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC068",
+      "content_cost": 8500.0,
+      "launch_date": "11/14",
+      "product": "Holiday Kit - Party",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "ilizas": [
+    {
+      "job_code": "HC053",
+      "content_cost": 5000.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - Party",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC067",
+      "content_cost": 5000.0,
+      "launch_date": "11/14",
+      "product": "Holiday Kit - MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC052",
+      "content_cost": 10000.0,
+      "launch_date": "11/14",
+      "product": "Holiday Kit - MB",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC066",
+      "content_cost": 10000.0,
+      "launch_date": "11/18",
+      "product": "Holiday Kit - Party",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "aloprofile": [
+    {
+      "job_code": "HC034",
+      "content_cost": 3000.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC032",
+      "content_cost": 3000.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "lindseystackhouse_": [
+    {
+      "job_code": "HC031",
+      "content_cost": 2500.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - Fragrance",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "miranda.mckeon": [
+    {
+      "job_code": "HC028",
+      "content_cost": 6500.0,
+      "launch_date": "11/6",
+      "product": "Holiday Kit - Party",
+      "agency": "Internal",
+      "persona": "TrendSeekers",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "audreymadstowe": [
+    {
+      "job_code": "HC045",
+      "content_cost": 2500.0,
+      "launch_date": "11/11",
+      "product": "Holiday Kit - Pinky",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM293",
+      "content_cost": 2500.0,
+      "launch_date": "12/4",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M317",
+      "content_cost": 0,
+      "launch_date": "03/03",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "gracemihalich": [
+    {
+      "job_code": "HC035",
+      "content_cost": 850.0,
+      "launch_date": "11/11",
+      "product": "Holiday Kit - Fragrance",
+      "agency": "Internal",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "abigailghoward": [
+    {
+      "job_code": "HC055",
+      "content_cost": 3500.0,
+      "launch_date": "11/14",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "adaatude": [
+    {
+      "job_code": "HC061",
+      "content_cost": 8000.0,
+      "launch_date": "11/14",
+      "product": "",
+      "agency": "Internal",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "claire.tammaro": [
+    {
+      "job_code": "HC048",
+      "content_cost": 1500.0,
+      "launch_date": "11/14",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "helenleland": [
+    {
+      "job_code": "HC058",
+      "content_cost": 6500.0,
+      "launch_date": "11/14",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC105",
+      "content_cost": 1500.0,
+      "launch_date": "12/25",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "ES028",
+      "content_cost": 5500.0,
+      "launch_date": "02/13/26",
+      "product": "Eye Shadow Stick",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "LR033",
+      "content_cost": 1500.0,
+      "launch_date": "03/26/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "kennedycrichlow": [
+    {
+      "job_code": "HC047",
+      "content_cost": 3000.0,
+      "launch_date": "11/14",
+      "product": "Holiday Kit - Lip",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "megan.hawthorne": [
+    {
+      "job_code": "HC057",
+      "content_cost": 2000.0,
+      "launch_date": "11/14",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "ageegretta": [
+    {
+      "job_code": "M248",
+      "content_cost": 3000.0,
+      "launch_date": "11/21",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "mikayla_breann": [
+    {
+      "job_code": "J024",
+      "content_cost": 0,
+      "launch_date": "",
+      "product": "JETM",
+      "agency": "Internal",
+      "persona": "SkincareEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "kaykaybrown": [
+    {
+      "job_code": "HC059",
+      "content_cost": 1500.0,
+      "launch_date": "11/21",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "FashionEnthusiast",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "paleomg": [
+    {
+      "job_code": "RHM280",
+      "content_cost": 2500.0,
+      "launch_date": "11/21",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 1000.0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M256",
+      "content_cost": 1500.0,
+      "launch_date": "11/28",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "LuxuryForLess",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "J124",
+      "content_cost": 4500.0,
+      "launch_date": "02/19",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "Natural Look",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "kayleighskloset": [
+    {
+      "job_code": "RHM277",
+      "content_cost": 2000.0,
+      "launch_date": "11/21",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "FashionEnthusiast",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "emma_grace_blog": [
+    {
+      "job_code": "RHM278",
+      "content_cost": 1500.0,
+      "launch_date": "11/21",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "SK015",
+      "content_cost": 1700.0,
+      "launch_date": "01/29",
+      "product": "Sunkissed Kit",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "tracycampoli": [
+    {
+      "job_code": "RHM279",
+      "content_cost": 1500.0,
+      "launch_date": "11/21",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "HealthEnthusiast",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M289",
+      "content_cost": 4000.0,
+      "launch_date": "02/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "alexandreagarza": [
+    {
+      "job_code": "HC073",
+      "content_cost": 0.0,
+      "launch_date": "11/25",
+      "product": "Holiday Kit - Lip",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "bobbiwiththeeye": [
+    {
+      "job_code": "HC071",
+      "content_cost": 3500.0,
+      "launch_date": "11/25",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "LuxuryForLess",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "laurenashleypatao": [
+    {
+      "job_code": "HC070",
+      "content_cost": 1750.0,
+      "launch_date": "11/25",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "ProblemSolution",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jones_tiara": [
+    {
+      "job_code": "HC072",
+      "content_cost": 1200.0,
+      "launch_date": "11/25",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "W058",
+      "content_cost": 1200.0,
+      "launch_date": "03/05",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "simone_alyssaa": [
+    {
+      "job_code": "HS46",
+      "content_cost": 3000.0,
+      "launch_date": "11/28",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Sale",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "newmodernmom": [
+    {
+      "job_code": "RHM294",
+      "content_cost": 6000.0,
+      "launch_date": "12/4",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jadelizroper": [
+    {
+      "job_code": "RHM295",
+      "content_cost": 7500.0,
+      "launch_date": "12/4",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 3000.0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "shutthekaleup": [
+    {
+      "job_code": "RHM296",
+      "content_cost": 2000.0,
+      "launch_date": "12/4",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "SkincareEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jiordyn": [
+    {
+      "job_code": "HC074",
+      "content_cost": 3000.0,
+      "launch_date": "12/4",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "amanda_stantonn": [
+    {
+      "job_code": "RHM292",
+      "content_cost": 3000.0,
+      "launch_date": "12/11",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "briannajoye_fitness": [
+    {
+      "job_code": "HC093",
+      "content_cost": 0.0,
+      "launch_date": "12/11",
+      "product": "Holiday Kit - MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M270",
+      "content_cost": 0.0,
+      "launch_date": "12/25",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "dannaed_": [
+    {
+      "job_code": "HC091",
+      "content_cost": 1000.0,
+      "launch_date": "12/11",
+      "product": "Holiday Kit - Lip",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "elleleonard": [
+    {
+      "job_code": "HC094",
+      "content_cost": 0.0,
+      "launch_date": "12/11",
+      "product": "Holiday Kit - Party",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jules.jacobson": [
+    {
+      "job_code": "RHM297",
+      "content_cost": 4000.0,
+      "launch_date": "12/11",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "katrinamckenna_": [
+    {
+      "job_code": "HC100",
+      "content_cost": 0.0,
+      "launch_date": "12/11",
+      "product": "Holiday Kit - Party",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "this_lovely_life_of_mine": [
+    {
+      "job_code": "HC080",
+      "content_cost": 1500.0,
+      "launch_date": "12/11",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "shawnjohnson": [
+    {
+      "job_code": "RHM313",
+      "content_cost": 15000.0,
+      "launch_date": "12/11",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Athlete",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "HC097",
+      "content_cost": 15000.0,
+      "launch_date": "12/18",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Athlete",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "J125",
+      "content_cost": 10000.0,
+      "launch_date": "2/5/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "RHM331",
+      "content_cost": 10000.0,
+      "launch_date": "2/5/26",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "somethingwhitty": [
+    {
+      "job_code": "HC081",
+      "content_cost": 0.0,
+      "launch_date": "12/11",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "anniejaffey": [
+    {
+      "job_code": "M258",
+      "content_cost": 2000.0,
+      "launch_date": "12/18",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "clancyburke": [
+    {
+      "job_code": "J111",
+      "content_cost": 1000.0,
+      "launch_date": "12/18",
+      "product": "JETM",
+      "agency": "Agentio",
+      "persona": "",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jessclarke_": [
+    {
+      "job_code": "HC082",
+      "content_cost": 3500.0,
+      "launch_date": "12/18",
+      "product": "Holiday Kit - Lip",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "ashleypetta": [
+    {
+      "job_code": "HC079",
+      "content_cost": 3800.0,
+      "launch_date": "12/25",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "sarahmbiegel": [
+    {
+      "job_code": "M265",
+      "content_cost": 1000.0,
+      "launch_date": "12/25",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Skits",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "iamlaurenmcbride": [
+    {
+      "job_code": "HC103",
+      "content_cost": 6000.0,
+      "launch_date": "12/25",
+      "product": "Holiday Kit - MB",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "thegetupmama": [
+    {
+      "job_code": "M257",
+      "content_cost": 0,
+      "launch_date": "12/25",
+      "product": "MB",
+      "agency": "Superfiliate",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "zee_styledit": [
+    {
+      "job_code": "HC120",
+      "content_cost": 4500.0,
+      "launch_date": "01/22",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "averyywoods": [
+    {
+      "job_code": "W044",
+      "content_cost": 20000.0,
+      "launch_date": "01/09/2026",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "SK017",
+      "content_cost": 20000.0,
+      "launch_date": "01/29",
+      "product": "Sunkissed Kit",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "katerinaseigel": [
+    {
+      "job_code": "W043",
+      "content_cost": 1500.0,
+      "launch_date": "01/09/2026",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "autumncalabrese": [
+    {
+      "job_code": "HC119",
+      "content_cost": 5500.0,
+      "launch_date": "01/09/2026",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "BeautyEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "naomie_olindo": [
+    {
+      "job_code": "E040",
+      "content_cost": 7000.0,
+      "launch_date": "01/12",
+      "product": "FP",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "bridgetlaurenh": [
+    {
+      "job_code": "M269",
+      "content_cost": 1166.0,
+      "launch_date": "12/25",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "marymargaretcuster": [
+    {
+      "job_code": "HC104",
+      "content_cost": 3000.0,
+      "launch_date": "01/01",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "brittfusilier": [
+    {
+      "job_code": "HC118",
+      "content_cost": 3500.0,
+      "launch_date": "01/01",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "laurenelyce": [
+    {
+      "job_code": "M275",
+      "content_cost": 5000.0,
+      "launch_date": "01/01",
+      "product": "MB",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "milenaciciotti": [
+    {
+      "job_code": "HC109",
+      "content_cost": 2000.0,
+      "launch_date": "01/05",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "ktmusser": [
+    {
+      "job_code": "W048",
+      "content_cost": 2000.0,
+      "launch_date": "01/29",
+      "product": "BODY",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jashamilton_": [
+    {
+      "job_code": "BC033",
+      "content_cost": 1000.0,
+      "launch_date": "01/07/2026",
+      "product": "BODY",
+      "agency": "Superbloom",
+      "persona": "SkincareEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "BC034",
+      "content_cost": 1000.0,
+      "launch_date": "01/09/2026",
+      "product": "BODY",
+      "agency": "Superbloom",
+      "persona": "SkincareEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "E041",
+      "content_cost": 2000.0,
+      "launch_date": "02/12",
+      "product": "En Route",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "christianblairvordy": [
+    {
+      "job_code": "M278",
+      "content_cost": 3500.0,
+      "launch_date": "02/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M325",
+      "content_cost": 3000.0,
+      "launch_date": "04/02/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "shylahmay": [
+    {
+      "job_code": "J122",
+      "content_cost": 1000.0,
+      "launch_date": "01/29/2026",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "J123",
+      "content_cost": 1000.0,
+      "launch_date": "02/26",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Better Version",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M263",
+      "content_cost": 1500.0,
+      "launch_date": "1/22/2026",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "global_munchkins": [
+    {
+      "job_code": "HC116",
+      "content_cost": 0,
+      "launch_date": "01/09/2026",
+      "product": "Holiday Kit - Party",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "mackenziealtig": [
+    {
+      "job_code": "SK013",
+      "content_cost": 3000.0,
+      "launch_date": "01/15/2026",
+      "product": "Sunkissed Kit",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "lifeofamandariley": [
+    {
+      "job_code": "SK014",
+      "content_cost": 2500.0,
+      "launch_date": "01/22/2026",
+      "product": "Sunkissed Kit",
+      "agency": "Superbloom",
+      "persona": "HealthEnthusiast",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "kat_shultis": [
+    {
+      "job_code": "W051",
+      "content_cost": 1500.0,
+      "launch_date": "02/19",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "neghinadina": [
+    {
+      "job_code": "W050",
+      "content_cost": 3000.0,
+      "launch_date": "02/05/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "alexhazen": [
+    {
+      "job_code": "M280",
+      "content_cost": 10000.0,
+      "launch_date": "01/29",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Travel Enthusiast",
+      "archetype": "Storyboard",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "__jasminenguyen": [
+    {
+      "job_code": "W049",
+      "content_cost": 2000.0,
+      "launch_date": "02/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "Natural Look",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jamiejchung": [
+    {
+      "job_code": "M282",
+      "content_cost": 7000.0,
+      "launch_date": "2/5/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "LifeJuggler",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jackieschimmel": [
+    {
+      "job_code": "BC053",
+      "content_cost": 4000.0,
+      "launch_date": "02/19",
+      "product": "BODY",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "karaleapior": [
+    {
+      "job_code": "J127",
+      "content_cost": 3000.0,
+      "launch_date": "02/19",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "hollykfischer_": [
+    {
+      "job_code": "DR020",
+      "content_cost": 2500.0,
+      "launch_date": "02/19",
+      "product": "Dusty Rose Kit",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "asana": [
+    {
+      "job_code": "RHM330",
+      "content_cost": 10000.0,
+      "launch_date": "2/5/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "Minimalist",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "aliwkay": [
+    {
+      "job_code": "M284",
+      "content_cost": 0,
+      "launch_date": "2/5/26",
+      "product": "JETM",
+      "agency": "Aspire",
+      "persona": "LifeJuggler",
+      "archetype": "SocialProof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "awholehealthlife": [
+    {
+      "job_code": "J130",
+      "content_cost": 6500.0,
+      "launch_date": "03/02",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "dailykongfidence": [
+    {
+      "job_code": "J131",
+      "content_cost": 4500.0,
+      "launch_date": "02/26",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "M316",
+      "content_cost": 4500.0,
+      "launch_date": "03/10/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "laurenreneeee": [
+    {
+      "job_code": "M305",
+      "content_cost": 1500.0,
+      "launch_date": "02/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "chinaealexander": [
+    {
+      "job_code": "W056",
+      "content_cost": 2500.0,
+      "launch_date": "04/02/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Better Version",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "M322",
+      "content_cost": 2500.0,
+      "launch_date": "03/10/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Better Version",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "abby_brancati": [
+    {
+      "job_code": "M306",
+      "content_cost": 500.0,
+      "launch_date": "03/10/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "christinatarabishy": [
+    {
+      "job_code": "ES027",
+      "content_cost": 1500.0,
+      "launch_date": "02/19",
+      "product": "Eye Shadow Stick",
+      "agency": "Superbloom",
+      "persona": "Social Proof",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "LR044",
+      "content_cost": 500.0,
+      "launch_date": "03/26/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "healingcavelady": [
+    {
+      "job_code": "J133",
+      "content_cost": 5000.0,
+      "launch_date": "03/12/26",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "LR031",
+      "content_cost": 5000.0,
+      "launch_date": "03/19/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Nourishing",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "mariaroberts": [
+    {
+      "job_code": "W057",
+      "content_cost": 3500.0,
+      "launch_date": "03/10/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "almost_readyblog": [
+    {
+      "job_code": "J134",
+      "content_cost": 4500.0,
+      "launch_date": "03/05",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "J139",
+      "content_cost": 2250.0,
+      "launch_date": "03/10/26",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "jennibrhodes": [
+    {
+      "job_code": "J134",
+      "content_cost": 1200.0,
+      "launch_date": "03/05",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "elizabethljoy": [
+    {
+      "job_code": "W059",
+      "content_cost": 4500.0,
+      "launch_date": "03/26/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "W060",
+      "content_cost": 0,
+      "launch_date": "03/26/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "ashlynsailsbury": [
+    {
+      "job_code": "W061",
+      "content_cost": 3500.0,
+      "launch_date": "03/31/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "mimimythen": [
+    {
+      "job_code": "J135",
+      "content_cost": 1500.0,
+      "launch_date": "03/05",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Natural Look",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "emily.fauver": [
+    {
+      "job_code": "W063",
+      "content_cost": 10000.0,
+      "launch_date": "02/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "baskinchamp": [
+    {
+      "job_code": "J137",
+      "content_cost": 2000.0,
+      "launch_date": "03/10/26",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "theegreatgabs": [
+    {
+      "job_code": "M314",
+      "content_cost": 2000.0,
+      "launch_date": "03/12/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "minahamideh": [
+    {
+      "job_code": "M315",
+      "content_cost": 2500.0,
+      "launch_date": "03/12/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "thetessasmith": [
+    {
+      "job_code": "M319",
+      "content_cost": 2500.0,
+      "launch_date": "03/03",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Clean",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "kyndallwearswhat": [
+    {
+      "job_code": "M329",
+      "content_cost": 800.0,
+      "launch_date": "03/31/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Better Version",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "alondrapriscilla": [
+    {
+      "job_code": "M321",
+      "content_cost": 1500.0,
+      "launch_date": "03/12/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jessaseewald": [
+    {
+      "job_code": "M327",
+      "content_cost": 3250.0,
+      "launch_date": "04/02/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "greykins": [
+    {
+      "job_code": "M331",
+      "content_cost": 2000.0,
+      "launch_date": "03/31/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "joannabysterveld": [
+    {
+      "job_code": "M336",
+      "content_cost": 3500.0,
+      "launch_date": "03/26/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jaimedarretta": [
+    {
+      "job_code": "CL148",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "Mini MB",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL149",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "Mini MB",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL150",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "Mini MB",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "claire.stebell": [
+    {
+      "job_code": "CL117",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "Eye Shadow Stick",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL124",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "Eye Shadow Stick",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL118",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "MB",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL119",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "MB",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL120",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "JETM",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL122",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "HeroKit",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL121",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "JETM",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "DesirableSituation",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL123",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "HeroKit",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "thatmomtay": [
+    {
+      "job_code": "CL146",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "MB",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    },
+    {
+      "job_code": "CL147",
+      "content_cost": 0,
+      "launch_date": "03/05",
+      "product": "MB",
+      "agency": "CousinLabs",
+      "persona": "BusySuburbanMom",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "molly.the.mom": [
+    {
+      "job_code": "M338",
+      "content_cost": 7500.0,
+      "launch_date": "04/02/26",
+      "product": "Mini MB",
+      "agency": "Superbloom",
+      "persona": "BusySuburbanMom",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "london_ellis": [
+    {
+      "job_code": "ES023",
+      "content_cost": 1500.0,
+      "launch_date": "02/19",
+      "product": "Eye Shadow Stick",
+      "agency": "Superbloom",
+      "persona": "",
+      "archetype": "",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "sincerelyjules": [
+    {
+      "job_code": "W064",
+      "content_cost": 15000.0,
+      "launch_date": "03/31/26",
+      "product": "WTF",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Convenience",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "olivia.adriance": [
+    {
+      "job_code": "LR034",
+      "content_cost": 13000.0,
+      "launch_date": "03/31/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "Cooking Content",
+      "archetype": "Testimonial",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "reaganndavis1": [
+    {
+      "job_code": "LR046",
+      "content_cost": 650.0,
+      "launch_date": "03/31/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Nourishing",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    },
+    {
+      "job_code": "LR048",
+      "content_cost": 650.0,
+      "launch_date": "03/31/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Nourishing",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "sarakathryns": [
+    {
+      "job_code": "LR037",
+      "content_cost": 3500.0,
+      "launch_date": "03/19/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "bethanne_brice": [
+    {
+      "job_code": "LR038",
+      "content_cost": 2000.0,
+      "launch_date": "03/19/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "alectreffs": [
+    {
+      "job_code": "LR030",
+      "content_cost": 2500.0,
+      "launch_date": "03/19/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Better Version",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "isabellarawlingss": [
+    {
+      "job_code": "LR028",
+      "content_cost": 2000.0,
+      "launch_date": "03/19/26",
+      "product": "Lip Recharge",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Nourishing",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "jennalitner": [
+    {
+      "job_code": "J136",
+      "content_cost": 3750.0,
+      "launch_date": "03/26/26",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Natural Look",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "carlycushnie": [
+    {
+      "job_code": "M328",
+      "content_cost": 2500.0,
+      "launch_date": "03/26/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Natural Look",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ],
+  "bethennyfrankel": [
+    {
+      "job_code": "M323",
+      "content_cost": 40000.0,
+      "launch_date": "03/20/26",
+      "product": "MB",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Active"
+    }
+  ],
+  "judyxkam": [
+    {
+      "job_code": "J141",
+      "content_cost": 2500.0,
+      "launch_date": "03/26/26",
+      "product": "JETM",
+      "agency": "Superbloom",
+      "persona": "General",
+      "archetype": "Social Proof",
+      "renewal_cost": 0,
+      "renewal_status": "",
+      "status": "Paused"
+    }
+  ]
+}
