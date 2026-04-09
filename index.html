@@ -433,7 +433,7 @@ function renderCreatorTable() {
       <td style="background:rgba(180,136,11,0.06)">${cNb.visits>0?fmtP(cNbNewPct):'--'}</td>
       <td style="background:rgba(26,42,58,0.06)">${fmtP(GA4_DATA.partnership.bounce_rate)}</td>
       <td style="background:rgba(26,42,58,0.06)">${fmtP(GA4_DATA.partnership.engagement_rate)}</td>
-      <td style="background:rgba(26,42,58,0.06)">${GA4_DATA.partnership.time_on_site.toFixed(2)}m</td>
+      <td style="background:rgba(26,42,58,0.06)">${(GA4_DATA.partnership.time_on_site * 60).toFixed(0)}s</td>
       <td>${c.days_live}</td><td><span class="status-dot ${sc}"></span> ${se}</td>
     </tr>`;
     // Job-level rows
