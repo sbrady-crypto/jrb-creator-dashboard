@@ -296,7 +296,13 @@ function getFilteredCreators() {
       const effCost = (totalCost > 0 && c.amortized > 0) ? c.amortized : totalCost;
       const eff = c.spend > 0 ? (effCost / c.spend * 100) : 0;
       const status = eff <= 0 ? 'green' : eff < 10 ? 'green' : eff < 25 ? 'yellow' : 'red';
-      return { ...c, content_efficiency: eff, status };
+      let displayAmortized = c.amortized;
+      if (displayAmortized === 0 && totalCost > 0 && c.launch_date) {
+        const windowEnd = new Date(c.launch_date);
+        windowEnd.setDate(windowEnd.getDate() + 30);
+        if (new Date() > windowEnd) displayAmortized = totalCost;
+      }
+      return { ...c, content_efficiency: eff, status, amortized: displayAmortized };
     }
     const cDaily = (c.daily||[]).filter(d => dates.has(d.date));
     const spend = cDaily.reduce((s,d)=>s+(d.spend||0),0);
@@ -737,7 +743,7 @@ function renderGA4() {
   const metrics = [
     {label:'Bounce Rate', pVal:p.bounce_rate, bVal:b.bounce_rate, fmt:v=>v.toFixed(2)+'%', inv:true},
     {label:'Engagement Rate', pVal:p.engagement_rate, bVal:b.engagement_rate, fmt:v=>v.toFixed(2)+'%', inv:false},
-    {label:'Time on Site (min)', pVal:p.time_on_site, bVal:b.time_on_site, fmt:v=>v.toFixed(2), inv:false},
+    {label:'Time on Site (sec)', pVal:p.time_on_site, bVal:b.time_on_site, fmt:v=>(v*60).toFixed(0)+'s', inv:false},
   ];
   let pRows = '', bRows = '';
   metrics.forEach(m => {
