@@ -164,7 +164,7 @@ tbody tr:hover { background:var(--cream); }
       <div style="overflow-x:auto;">
         <table id="creatorTable"><thead><tr>
           <th></th><th data-sort="handle">Creator</th>
-          <th data-sort="content_fee">Content Fee</th><th data-sort="renewal_fee">Renewal Fee</th><th data-sort="total_cost">Total Cost</th><th data-sort="amortized">Amortized</th><th data-sort="content_efficiency">Content Eff.</th>
+          <th data-sort="content_fee" style="background:#2a2318;color:#C4A35A">Content Fee</th><th data-sort="renewal_fee" style="background:#2a2318;color:#C4A35A">Renewal Fee</th><th data-sort="total_cost" style="background:#2a2318;color:#C4A35A">Total Cost</th><th data-sort="amortized" style="background:#2a2318;color:#C4A35A">Amortized</th><th data-sort="content_efficiency" style="background:#2a2318;color:#C4A35A">Content Eff.</th>
           <th data-sort="spend">Spend</th><th data-sort="purchases">Purchases</th>
           <th data-sort="roas">ROAS</th><th data-sort="cpa">CPA</th><th data-sort="cpm">CPM</th><th data-sort="ctr">CTR</th>
           <th data-sort="nb_roas" style="background:#2d2926;color:#D4A84B">NB ROAS<br><span style="font-size:9px;font-weight:400">(1d, New)</span></th>
@@ -422,7 +422,7 @@ function renderCreatorTable() {
     html += `<tr style="cursor:pointer" onclick="toggleJobs(${i})">
       <td><button class="expand-btn" id="btn-c-${i}">+</button></td>
       <td><strong>${c.handle}</strong><br><span style="font-size:10px;color:var(--dark-light)">${c.agency||'--'} · ${numJobs} job${numJobs!==1?'s':''}</span></td>
-      <td>${fmt$(c.content_fee)}</td><td>${c.renewal_fee?fmt$(c.renewal_fee):'--'}</td><td>${fmt$(c.total_cost||c.content_fee)}</td><td>${fmt$(c.amortized)}</td><td style="font-weight:600;color:${c.content_efficiency<=15?'var(--green)':c.content_efficiency<=30?'#F4A340':'var(--red)'}">${fmtP(c.content_efficiency)}</td>
+      <td style="background:rgba(196,163,90,0.08)">${fmt$(c.content_fee)}</td><td style="background:rgba(196,163,90,0.08)">${c.renewal_fee?fmt$(c.renewal_fee):'--'}</td><td style="background:rgba(196,163,90,0.08)">${fmt$(c.total_cost||c.content_fee)}</td><td style="background:rgba(196,163,90,0.08)">${fmt$(c.amortized)}</td><td style="background:rgba(196,163,90,0.08);font-weight:600;color:${c.content_efficiency<=15?'var(--green)':c.content_efficiency<=30?'#F4A340':'var(--red)'}">${fmtP(c.content_efficiency)}</td>
       <td>${fmt$(c.spend)}</td><td>${fmtN(c.purchases)}</td>
       <td style="font-weight:600;color:${roasColor}">${fmtX(c.roas)}</td>
       <td>${fmt$2(c.cpa)}</td><td>${fmt$2(c.cpm)}</td><td>${fmtP(c.ctr)}</td>
