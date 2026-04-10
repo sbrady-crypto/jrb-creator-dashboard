@@ -169,9 +169,6 @@ tbody tr:hover { background:var(--cream); }
           <th data-sort="roas">ROAS</th><th data-sort="cpa">CPA</th><th data-sort="cpm">CPM</th><th data-sort="ctr">CTR</th>
           <th data-sort="nb_roas" style="background:#2d2926;color:#D4A84B">NB ROAS<br><span style="font-size:9px;font-weight:400">(1d, New)</span></th>
           <th data-sort="nb_new_pct" style="background:#2d2926;color:#D4A84B">% Visits<br><span style="font-size:9px;font-weight:400">(New)</span></th>
-          <th data-sort="ga4_bounce" style="background:#1a2a3a;color:#64B5F6">Bounce Rate<br><span style="font-size:9px;font-weight:400">(GA4 Avg)</span></th>
-          <th data-sort="ga4_engage" style="background:#1a2a3a;color:#64B5F6">Engage Rate<br><span style="font-size:9px;font-weight:400">(GA4 Avg)</span></th>
-          <th data-sort="ga4_tos" style="background:#1a2a3a;color:#64B5F6">Time on Site<br><span style="font-size:9px;font-weight:400">(GA4 Avg)</span></th>
           <th data-sort="days_live">Days Live</th><th data-sort="status">Status</th>
         </tr></thead><tbody id="creatorBody"></tbody></table>
       </div>
@@ -431,9 +428,6 @@ function renderCreatorTable() {
       <td>${fmt$2(c.cpa)}</td><td>${fmt$2(c.cpm)}</td><td>${fmtP(c.ctr)}</td>
       <td style="background:rgba(180,136,11,0.06);font-weight:600;color:${nbRoasColor}">${cNb.rev>0?fmtX(cNbRoas):'--'}</td>
       <td style="background:rgba(180,136,11,0.06)">${cNb.visits>0?fmtP(cNbNewPct):'--'}</td>
-      <td style="background:rgba(26,42,58,0.06)">${fmtP(GA4_DATA.partnership.bounce_rate)}</td>
-      <td style="background:rgba(26,42,58,0.06)">${fmtP(GA4_DATA.partnership.engagement_rate)}</td>
-      <td style="background:rgba(26,42,58,0.06)">${(GA4_DATA.partnership.time_on_site * 60).toFixed(0)}s</td>
       <td>${c.days_live}</td><td><span class="status-dot ${sc}"></span> ${se}</td>
     </tr>`;
     // Job-level rows
