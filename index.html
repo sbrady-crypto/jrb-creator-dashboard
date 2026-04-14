@@ -111,6 +111,10 @@ tbody tr:hover { background:var(--cream); }
 .organic-badge { background:#d4edda; color:#155724; }
 .ugc-badge { background:#cce5ff; color:#004085; }
 .ovugc-val { font-size:14px; font-weight:700; color:var(--dark); }
+.ovugc-charts-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+.ovugc-chart-wrap { background:var(--white); border-radius:var(--radius); padding:16px 20px; box-shadow:var(--shadow); }
+.ovugc-note { font-size:10px; color:var(--dark-light); opacity:0.65; margin-top:6px; text-align:center; font-style:italic; }
+@media (max-width:768px) { .ovugc-charts-row { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -159,7 +163,14 @@ tbody tr:hover { background:var(--cream); }
   </div>
 </div>
 <div class="container">
-  <div class="section"><div class="section-title">Organic vs UGC Performance</div><div class="ovugc-grid" id="ovugcGrid"></div></div>
+  <div class="section">
+    <div class="section-title">Organic vs UGC Performance</div>
+    <div class="ovugc-grid" id="ovugcGrid"></div>
+    <div class="ovugc-charts-row">
+      <div class="ovugc-chart-wrap"><canvas id="ovugcRadarChart"></canvas><div class="ovugc-note">Normalized 0–100, higher = better on all axes. % New Visits is all-time (NB).</div></div>
+      <div class="ovugc-chart-wrap"><canvas id="ovugcScatterChart"></canvas><div class="ovugc-note">Each bubble = one creator. Bubble size = purchases.</div></div>
+    </div>
+  </div>
   <div class="section"><div class="section-title">Partnership KPI Summary</div><div class="kpi-grid" id="kpiGrid"></div></div>
   <div class="section"><div class="section-title">Partnership vs BAU Comparison</div><div class="comparison-grid" id="compGrid"></div>
     <div class="chart-row" style="margin-top:14px;"><div class="chart-container"><canvas id="spendTrendChart"></canvas></div><div class="chart-container"><canvas id="roasTrendChart"></canvas></div></div>
@@ -376,7 +387,7 @@ function renderComparison() {
   grid.innerHTML = compCard('Partnership Ads', pAgg) + compCard('BAU (Non-Partnership)', bAgg);
 }
 
-let spendChart, roasChart, creatorSpendChart, creatorRoasChart, decisionChart;
+let spendChart, roasChart, creatorSpendChart, creatorRoasChart, decisionChart, ovugcRadarChart, ovugcScatterChart;
 const chartColors = ['#B8860B','#C62828','#2E7D32','#1565C0','#6A1B9A','#E65100','#00838F','#4E342E'];
 
 function renderTrendCharts() {
@@ -805,53 +816,149 @@ document.getElementById('searchCreator').addEventListener('input', renderCreator
 
 
 function buildOvUGC() {
-  const groups = { organic: [], ugc: [], both: [] };
-  CREATORS.forEach(c => { if (groups[c.content_type]) groups[c.content_type].push(c); });
-  
-  const orgCreators = CREATORS.filter(c => c.content_type === 'organic' || c.content_type === 'both');
-  const ugcCreators = CREATORS.filter(c => c.content_type === 'ugc' || c.content_type === 'both');
-  
+  // Use date-filtered creators so metrics respond to date pills
+  const all = getFilteredCreators();
+  const orgCreators = all.filter(c => c.content_type === 'organic' || c.content_type === 'both');
+  const ugcCreators = all.filter(c => c.content_type === 'ugc' || c.content_type === 'both');
+
   function agg(list) {
-    let spend=0, revenue=0, purchases=0, impressions=0, content_fee=0, count=0;
-    list.forEach(c => { spend+=c.spend||0; revenue+=c.revenue||0; purchases+=c.purchases||0; impressions+=c.impressions||0; content_fee+=c.content_fee||0; count++; });
-    return { spend, revenue, purchases, impressions, content_fee, count,
-      roas: spend>0 ? revenue/spend : 0,
-      cpa: purchases>0 ? spend/purchases : 0,
-      cpm: impressions>0 ? spend/impressions*1000 : 0 };
+    let spend=0, revenue=0, purchases=0, impressions=0, tot_fee=0, tot_amortized=0, count=0, nb_nv=0, nb_visits=0;
+    list.forEach(c => {
+      spend      += c.spend||0;
+      revenue    += c.revenue||0;
+      purchases  += c.purchases||0;
+      impressions+= c.impressions||0;
+      tot_fee    += c.content_fee||0;
+      tot_amortized += c.amortized||0;
+      count++;
+      // NB is all-time (no daily breakdown) — pull from NB_DATA via ad names
+      const allAds = (c.jobs||[]).flatMap(j => j.ads||[]);
+      const nb = getNbForAds(allAds);
+      nb_nv    += nb.nv;
+      nb_visits+= nb.visits;
+    });
+    const eff_cost = tot_amortized > 0 ? tot_amortized : tot_fee;
+    return {
+      spend, revenue, purchases, impressions, tot_fee, count,
+      roas:        spend>0     ? revenue/spend       : 0,
+      cpa:         purchases>0 ? spend/purchases     : 0,
+      cpm:         impressions>0 ? spend/impressions*1000 : 0,
+      content_eff: spend>0     ? eff_cost/spend*100 : 0,
+      nb_new_pct:  nb_visits>0 ? nb_nv/nb_visits*100 : 0,
+      avg_fee:     count>0     ? tot_fee/count       : 0
+    };
   }
-  
+
   const o = agg(orgCreators);
   const u = agg(ugcCreators);
-  
-  function fmt(n, prefix='$', dec=0) { return prefix + n.toFixed(dec).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
-  
-  function card(label, oVal, uVal, betterLower=false) {
-    const oBetter = betterLower ? oVal <= uVal : oVal >= uVal;
+
+  // ── Metric Cards ──────────────────────────────────────────────────────────
+  function fmtD(n)  { return '$' + (n||0).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','); }
+  function fmtX2(n) { return (n||0).toFixed(2)+'x'; }
+  function fmtP1(n) { return (n||0).toFixed(1)+'%'; }
+
+  function card(label, oRaw, uRaw, oDisp, uDisp, betterLower=false) {
+    const oBetter = betterLower ? (oRaw||0) <= (uRaw||0) : (oRaw||0) >= (uRaw||0);
     return `<div class="ovugc-card">
       <div class="ovugc-label">${label}</div>
       <div class="ovugc-row">
-        <div class="ovugc-type ${oBetter ? 'ovugc-winner' : ''}">
+        <div class="ovugc-type ${oBetter?'ovugc-winner':''}">
           <span class="ovugc-badge organic-badge">Organic</span>
-          <span class="ovugc-val">${oVal}</span>
+          <span class="ovugc-val">${oDisp}</span>
         </div>
-        <div class="ovugc-type ${!oBetter ? 'ovugc-winner' : ''}">
+        <div class="ovugc-type ${!oBetter?'ovugc-winner':''}">
           <span class="ovugc-badge ugc-badge">UGC</span>
-          <span class="ovugc-val">${uVal}</span>
+          <span class="ovugc-val">${uDisp}</span>
         </div>
       </div>
     </div>`;
   }
-  
-  document.getElementById('ovugcGrid').innerHTML = `
-    ${card('Creators', o.count + ' creators', u.count + ' creators')}
-    ${card('Total Spend', fmt(o.spend), fmt(u.spend))}
-    ${card('Total Revenue', fmt(o.revenue), fmt(u.revenue))}
-    ${card('ROAS', o.roas.toFixed(2)+'x', u.roas.toFixed(2)+'x')}
-    ${card('CPA', fmt(o.cpa), fmt(u.cpa), true)}
-    ${card('CPM', fmt(o.cpm), fmt(u.cpm), true)}
-    ${card('Purchases', o.purchases.toLocaleString(), u.purchases.toLocaleString())}
-    ${card('Avg Content Fee', fmt(o.count>0?o.content_fee/o.count:0), fmt(u.count>0?u.content_fee/u.count:0), true)}
-  `;
+
+  document.getElementById('ovugcGrid').innerHTML = [
+    card('Creators',         o.count,       u.count,       o.count+' creators',             u.count+' creators'),
+    card('Total Spend',      o.spend,       u.spend,       fmtD(o.spend),                   fmtD(u.spend)),
+    card('ROAS',             o.roas,        u.roas,        fmtX2(o.roas),                   fmtX2(u.roas)),
+    card('CPA',              o.cpa,         u.cpa,         fmtD(o.cpa),                     fmtD(u.cpa),     true),
+    card('CPM',              o.cpm,         u.cpm,         '$'+o.cpm.toFixed(2),             '$'+u.cpm.toFixed(2), true),
+    card('Purchases',        o.purchases,   u.purchases,   (o.purchases||0).toLocaleString(),(u.purchases||0).toLocaleString()),
+    card('Content Eff.',     o.content_eff, u.content_eff, fmtP1(o.content_eff),            fmtP1(u.content_eff), true),
+    card('% New Visits (NB)',o.nb_new_pct,  u.nb_new_pct,  fmtP1(o.nb_new_pct),             fmtP1(u.nb_new_pct)),
+    card('Avg Content Fee',  u.avg_fee,     o.avg_fee,     fmtD(o.avg_fee),                 fmtD(u.avg_fee), true)
+  ].join('');
+
+  // ── Radar Chart ───────────────────────────────────────────────────────────
+  // Normalize each metric 0-100 where 100 = best performer on that axis
+  function norm(oV, uV, lowerBetter) {
+    const mx = Math.max(Math.abs(oV||0), Math.abs(uV||0)) || 1;
+    if (lowerBetter) return [uV>0?(1-(oV||0)/mx)*100:50, oV>0?(1-(uV||0)/mx)*100:50];
+    return [(oV||0)/mx*100, (uV||0)/mx*100];
+  }
+  const [oR,uR]   = norm(o.roas,        u.roas,        false);
+  const [oCp,uCp] = norm(o.cpa,         u.cpa,         true);
+  const [oCm,uCm] = norm(o.cpm,         u.cpm,         true);
+  const [oEf,uEf] = norm(o.content_eff, u.content_eff, true);
+  const [oNv,uNv] = norm(o.nb_new_pct,  u.nb_new_pct,  false);
+  const [oPu,uPu] = norm(o.purchases,   u.purchases,   false);
+
+  if (ovugcRadarChart) ovugcRadarChart.destroy();
+  ovugcRadarChart = new Chart(document.getElementById('ovugcRadarChart'), {
+    type: 'radar',
+    data: {
+      labels: ['ROAS','CPA Effic.','CPM Effic.','Content Effic.','% New Visits','Purchase Vol.'],
+      datasets: [
+        { label:'Organic', data:[oR,oCp,oCm,oEf,oNv,oPu],
+          borderColor:'#2E7D32', backgroundColor:'rgba(46,125,50,0.15)', borderWidth:2, pointBackgroundColor:'#2E7D32' },
+        { label:'UGC',     data:[uR,uCp,uCm,uEf,uNv,uPu],
+          borderColor:'#1565C0', backgroundColor:'rgba(21,101,192,0.15)', borderWidth:2, pointBackgroundColor:'#1565C0' }
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:true,
+      plugins: {
+        title:   { display:true, text:'Performance Radar (normalized · higher = better)', font:{size:13} },
+        legend:  { position:'top' },
+        tooltip: { callbacks: { label: ctx => ctx.dataset.label+': '+ctx.parsed.r.toFixed(1)+' (normalized)' } }
+      },
+      scales: { r: { min:0, max:100, ticks:{ stepSize:25, font:{size:9} }, grid:{ color:'rgba(0,0,0,0.1)' } } }
+    }
+  });
+
+  // ── Bubble Scatter: Spend vs ROAS, size = purchases ───────────────────────
+  function toScatter(list) {
+    return list.map(c => ({
+      x: c.spend||0,
+      y: c.roas||0,
+      r: Math.max(4, Math.sqrt((c.purchases||1)) * 1.5),
+      label: c.name||c.handle
+    }));
+  }
+  if (ovugcScatterChart) ovugcScatterChart.destroy();
+  ovugcScatterChart = new Chart(document.getElementById('ovugcScatterChart'), {
+    type: 'bubble',
+    data: {
+      datasets: [
+        { label:'Organic', data:toScatter(orgCreators),
+          backgroundColor:'rgba(46,125,50,0.55)', borderColor:'#2E7D32', borderWidth:1 },
+        { label:'UGC',     data:toScatter(ugcCreators),
+          backgroundColor:'rgba(21,101,192,0.55)', borderColor:'#1565C0', borderWidth:1 }
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:true,
+      plugins: {
+        title:  { display:true, text:'Spend vs ROAS by Creator', font:{size:13} },
+        legend: { position:'top' },
+        tooltip: { callbacks: { label: ctx => {
+          const d=ctx.raw;
+          return d.label+': $'+(d.x||0).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')+' spend · '+(d.y||0).toFixed(2)+'x ROAS';
+        }}}
+      },
+      scales: {
+        x: { title:{ display:true, text:'Meta Spend' }, ticks:{ callback:v=>'$'+(v/1000).toFixed(0)+'k', font:{size:10} } },
+        y: { title:{ display:true, text:'ROAS' }, ticks:{ font:{size:10} } }
+      }
+    }
+  });
 }
 
 function renderAll() {
