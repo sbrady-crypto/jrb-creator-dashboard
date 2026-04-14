@@ -826,8 +826,11 @@ function buildOvUGC() {
   const ugcCreators = all.filter(c => c.content_type === 'ugc' || c.content_type === 'both');
 
   function agg(list) {
-    let spend=0, revenue=0, purchases=0, impressions=0, tot_fee=0, eff_cost_sum=0, count=0;
+    let spend=0, revenue=0, purchases=0, impressions=0, tot_fee=0, count=0;
     let nb_nv=0, nb_visits=0, nb_rev=0, nb_spend=0;
+    // Content efficiency uses ALL-TIME spend + cost: fee is a one-time investment
+    // best measured against total media deployed, not a filtered slice of spend.
+    let eff_cost_sum=0, eff_spend_sum=0;
     list.forEach(c => {
       spend      += c.spend||0;
       revenue    += c.revenue||0;
@@ -835,10 +838,14 @@ function buildOvUGC() {
       impressions+= c.impressions||0;
       tot_fee    += c.content_fee||0;
       count++;
-      // Per-creator: use amortized if set, else fall back to content_fee
-      // Mirrors getFilteredCreators() effCost logic exactly
-      const cTotalCost = c.total_cost || c.content_fee || 0;
-      eff_cost_sum += (c.amortized > 0) ? c.amortized : cTotalCost;
+      // Look up all-time spend & cost from raw CREATORS array
+      const orig = CREATORS.find(o => o.handle === c.handle) || c;
+      const origSpend = orig.spend || 0;
+      const origCost  = orig.total_cost || orig.content_fee || 0;
+      if (origSpend > 0 && origCost > 0) {
+        eff_cost_sum  += origCost;
+        eff_spend_sum += origSpend;
+      }
       // NB is all-time — pull from NB_DATA via ad names
       const allAds = (c.jobs||[]).flatMap(j => j.ads||[]);
       const nb = getNbForAds(allAds);
@@ -849,13 +856,13 @@ function buildOvUGC() {
     });
     return {
       spend, revenue, purchases, impressions, tot_fee, count,
-      roas:        spend>0      ? revenue/spend            : 0,
-      cpa:         purchases>0  ? spend/purchases          : 0,
-      cpm:         impressions>0? spend/impressions*1000   : 0,
-      content_eff: spend>0      ? eff_cost_sum/spend*100   : 0,
-      nb_new_pct:  nb_visits>0  ? nb_nv/nb_visits*100      : 0,
-      nb_roas:     nb_spend>0   ? nb_rev/nb_spend          : 0,
-      avg_fee:     count>0      ? tot_fee/count            : 0
+      roas:        spend>0         ? revenue/spend              : 0,
+      cpa:         purchases>0     ? spend/purchases            : 0,
+      cpm:         impressions>0   ? spend/impressions*1000     : 0,
+      content_eff: eff_spend_sum>0 ? eff_cost_sum/eff_spend_sum*100 : 0,
+      nb_new_pct:  nb_visits>0     ? nb_nv/nb_visits*100        : 0,
+      nb_roas:     nb_spend>0      ? nb_rev/nb_spend            : 0,
+      avg_fee:     count>0         ? tot_fee/count              : 0
     };
   }
 
@@ -876,7 +883,7 @@ function buildOvUGC() {
     ['ROAS (Northbeam)',   o.nb_roas,     u.nb_roas,     fmtX2(o.nb_roas),                 fmtX2(u.nb_roas),                 false],
     ['CPA',                o.cpa,         u.cpa,         fmtD(o.cpa),                      fmtD(u.cpa),                      true],
     ['CPM',                o.cpm,         u.cpm,         '$'+o.cpm.toFixed(2),             '$'+u.cpm.toFixed(2),             true],
-    ['Content Efficiency', o.content_eff, u.content_eff, fmtP1(o.content_eff),             fmtP1(u.content_eff),             true],
+    ['Content Eff. (all-time)', o.content_eff, u.content_eff, fmtP1(o.content_eff),         fmtP1(u.content_eff),             true],
     ['% New Visits (NB)',  o.nb_new_pct,  u.nb_new_pct,  fmtP1(o.nb_new_pct),              fmtP1(u.nb_new_pct),              false],
     ['Avg Content Fee',    o.avg_fee,     u.avg_fee,     fmtD(o.avg_fee),                  fmtD(u.avg_fee),                  true],
   ];
