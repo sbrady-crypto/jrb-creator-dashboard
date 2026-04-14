@@ -101,20 +101,25 @@ tbody tr:hover { background:var(--cream); }
 .signout-btn { padding:6px 14px; border-radius:20px; border:1px solid rgba(250,249,247,0.3); background:transparent; color:var(--cream); cursor:pointer; font-size:12px; transition:all 0.2s; }
 .signout-btn:hover { background:rgba(250,249,247,0.15); }
 .user-info { font-size:12px; color:var(--cream); opacity:0.7; }
-.ovugc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
-.ovugc-card { background:var(--white); border-radius:var(--radius); padding:14px 16px; box-shadow:var(--shadow); }
-.ovugc-label { font-size:11px; font-weight:700; text-transform:uppercase; color:var(--warm-gray); margin-bottom:10px; letter-spacing:.5px; }
-.ovugc-row { display:flex; gap:10px; }
-.ovugc-type { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; padding:8px; border-radius:8px; background:var(--cream); }
-.ovugc-type.ovugc-winner { background:var(--light-gray); outline:2px solid var(--gold); }
-.ovugc-badge { font-size:9px; font-weight:700; text-transform:uppercase; padding:2px 6px; border-radius:4px; letter-spacing:.3px; }
-.organic-badge { background:#d4edda; color:#155724; }
-.ugc-badge { background:#cce5ff; color:#004085; }
-.ovugc-val { font-size:14px; font-weight:700; color:var(--dark); }
-.ovugc-charts-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+.ovugc-layout { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }
+.ovugc-comp-wrap { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+.ovugc-comp-wrap table { width:100%; border-collapse:collapse; font-size:13px; }
+.ovugc-comp-wrap thead th { padding:11px 18px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; }
+.ovugc-comp-wrap thead .th-label { background:var(--light-gray); color:var(--dark-light); width:38%; }
+.ovugc-comp-wrap thead .th-org { background:#e8f5e9; color:#1b5e20; text-align:right; }
+.ovugc-comp-wrap thead .th-ugc { background:#e3f2fd; color:#0d47a1; text-align:right; }
+.ovugc-comp-wrap tbody tr { border-top:1px solid var(--light-gray); }
+.ovugc-comp-wrap tbody tr:hover { background:rgba(0,0,0,0.02); }
+.ovugc-comp-wrap td { padding:9px 18px; vertical-align:middle; }
+.ovugc-comp-wrap .td-metric { font-size:11px; font-weight:600; text-transform:uppercase; color:var(--dark-light); letter-spacing:.4px; white-space:nowrap; }
+.ovugc-comp-wrap .td-val { font-size:14px; font-weight:700; color:var(--dark); text-align:right; }
+.ovugc-comp-wrap .win { position:relative; }
+.ovugc-comp-wrap .win-org { background:#f1f8f2; color:#1b5e20; }
+.ovugc-comp-wrap .win-ugc { background:#f0f6ff; color:#0d47a1; }
+.ovugc-comp-wrap .win::after { content:'✓'; font-size:10px; margin-left:5px; opacity:0.7; }
 .ovugc-chart-wrap { background:var(--white); border-radius:var(--radius); padding:16px 20px; box-shadow:var(--shadow); }
 .ovugc-note { font-size:10px; color:var(--dark-light); opacity:0.65; margin-top:6px; text-align:center; font-style:italic; }
-@media (max-width:768px) { .ovugc-charts-row { grid-template-columns:1fr; } }
+@media (max-width:768px) { .ovugc-layout { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -165,10 +170,9 @@ tbody tr:hover { background:var(--cream); }
 <div class="container">
   <div class="section">
     <div class="section-title">Organic vs UGC Performance</div>
-    <div class="ovugc-grid" id="ovugcGrid"></div>
-    <div class="ovugc-charts-row">
-      <div class="ovugc-chart-wrap"><canvas id="ovugcRadarChart"></canvas><div class="ovugc-note">Normalized 0–100, higher = better on all axes. % New Visits is all-time (NB).</div></div>
-      <div class="ovugc-chart-wrap"><canvas id="ovugcScatterChart"></canvas><div class="ovugc-note">Each bubble = one creator. Bubble size = purchases.</div></div>
+    <div class="ovugc-layout">
+      <div class="ovugc-comp-wrap" id="ovugcTable"></div>
+      <div class="ovugc-chart-wrap"><canvas id="ovugcScatterChart"></canvas><div class="ovugc-note">Each bubble = one creator · bubble size = purchases · Y axis = NB ROAS · NB metrics are all-time</div></div>
     </div>
   </div>
   <div class="section"><div class="section-title">Partnership KPI Summary</div><div class="kpi-grid" id="kpiGrid"></div></div>
@@ -858,92 +862,45 @@ function buildOvUGC() {
   const o = agg(orgCreators);
   const u = agg(ugcCreators);
 
-  // ── Metric Cards ──────────────────────────────────────────────────────────
-  function fmtD(n)  { return '$' + (n||0).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','); }
+  // ── Comparison Table ─────────────────────────────────────────────────────
+  function fmtD(n)  { return '$'+(n||0).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,','); }
   function fmtX2(n) { return (n||0).toFixed(2)+'x'; }
   function fmtP1(n) { return (n||0).toFixed(1)+'%'; }
 
-  function card(label, oRaw, uRaw, oDisp, uDisp, betterLower=false) {
-    const oBetter = betterLower ? (oRaw||0) <= (uRaw||0) : (oRaw||0) >= (uRaw||0);
-    return `<div class="ovugc-card">
-      <div class="ovugc-label">${label}</div>
-      <div class="ovugc-row">
-        <div class="ovugc-type ${oBetter?'ovugc-winner':''}">
-          <span class="ovugc-badge organic-badge">Organic</span>
-          <span class="ovugc-val">${oDisp}</span>
-        </div>
-        <div class="ovugc-type ${!oBetter?'ovugc-winner':''}">
-          <span class="ovugc-badge ugc-badge">UGC</span>
-          <span class="ovugc-val">${uDisp}</span>
-        </div>
-      </div>
-    </div>`;
-  }
-
-  document.getElementById('ovugcGrid').innerHTML = [
-    card('Creators',          o.count,       u.count,       o.count+' creators',              u.count+' creators'),
-    card('Total Spend',       o.spend,       u.spend,       fmtD(o.spend),                    fmtD(u.spend)),
-    card('ROAS (Northbeam)',  o.nb_roas,     u.nb_roas,     fmtX2(o.nb_roas),                 fmtX2(u.nb_roas)),
-    card('CPA',               o.cpa,         u.cpa,         fmtD(o.cpa),                      fmtD(u.cpa),     true),
-    card('CPM',               o.cpm,         u.cpm,         '$'+o.cpm.toFixed(2),              '$'+u.cpm.toFixed(2), true),
-    card('Purchases',         o.purchases,   u.purchases,   (o.purchases||0).toLocaleString(), (u.purchases||0).toLocaleString()),
-    card('Content Eff.',      o.content_eff, u.content_eff, fmtP1(o.content_eff),             fmtP1(u.content_eff), true),
-    card('% New Visits (NB)', o.nb_new_pct,  u.nb_new_pct,  fmtP1(o.nb_new_pct),              fmtP1(u.nb_new_pct)),
-    card('Avg Content Fee',   u.avg_fee,     o.avg_fee,     fmtD(o.avg_fee),                  fmtD(u.avg_fee), true)
-  ].join('');
-
-  // ── Index Bar Chart: winner = 100, loser = relative score ────────────────
-  // Shows actual values as data labels; bars are index scores so scales don't clash
-  const chartMetrics = [
-    { label:'ROAS (NB)',     oV:o.nb_roas,      uV:u.nb_roas,      low:false, fmt:v=>v.toFixed(2)+'x' },
-    { label:'CPA',           oV:o.cpa,           uV:u.cpa,           low:true,  fmt:v=>'$'+v.toFixed(0) },
-    { label:'CPM',           oV:o.cpm,           uV:u.cpm,           low:true,  fmt:v=>'$'+v.toFixed(2) },
-    { label:'Content Eff.%', oV:o.content_eff,   uV:u.content_eff,   low:true,  fmt:v=>v.toFixed(1)+'%' },
-    { label:'% New Visits',  oV:o.nb_new_pct,    uV:u.nb_new_pct,    low:false, fmt:v=>v.toFixed(1)+'%' },
+  // Each row: [label, oRaw, uRaw, oDisplay, uDisplay, lowerIsBetter]
+  const rows = [
+    ['Creators',           o.count,       u.count,       o.count+' creators',              u.count+' creators',              false],
+    ['Total Spend',        o.spend,       u.spend,       fmtD(o.spend),                    fmtD(u.spend),                    false],
+    ['Purchases',          o.purchases,   u.purchases,   (o.purchases||0).toLocaleString(), (u.purchases||0).toLocaleString(), false],
+    ['Revenue (NB)',       o.nb_roas*o.nb_spend_sum||o.revenue, u.nb_roas*u.nb_spend_sum||u.revenue, fmtD(o.revenue), fmtD(u.revenue), false],
+    ['ROAS (Northbeam)',   o.nb_roas,     u.nb_roas,     fmtX2(o.nb_roas),                 fmtX2(u.nb_roas),                 false],
+    ['CPA',                o.cpa,         u.cpa,         fmtD(o.cpa),                      fmtD(u.cpa),                      true],
+    ['CPM',                o.cpm,         u.cpm,         '$'+o.cpm.toFixed(2),             '$'+u.cpm.toFixed(2),             true],
+    ['Content Efficiency', o.content_eff, u.content_eff, fmtP1(o.content_eff),             fmtP1(u.content_eff),             true],
+    ['% New Visits (NB)',  o.nb_new_pct,  u.nb_new_pct,  fmtP1(o.nb_new_pct),              fmtP1(u.nb_new_pct),              false],
+    ['Avg Content Fee',    o.avg_fee,     u.avg_fee,     fmtD(o.avg_fee),                  fmtD(u.avg_fee),                  true],
   ];
-  const barLabels=[]; const oScores=[]; const uScores=[]; const oLabels=[]; const uLabels=[];
-  chartMetrics.forEach(m => {
-    const ov=m.oV||0, uv=m.uV||0;
-    barLabels.push(m.label);
-    oLabels.push(m.fmt(ov)); uLabels.push(m.fmt(uv));
-    if (m.low) {
-      const mn=Math.min(ov,uv)||0.01;
-      oScores.push(Math.round(mn/(ov||0.01)*100));
-      uScores.push(Math.round(mn/(uv||0.01)*100));
-    } else {
-      const mx=Math.max(ov,uv)||0.01;
-      oScores.push(Math.round(ov/mx*100));
-      uScores.push(Math.round(uv/mx*100));
-    }
-  });
 
-  if (ovugcRadarChart) ovugcRadarChart.destroy();
-  ovugcRadarChart = new Chart(document.getElementById('ovugcRadarChart'), {
-    type: 'bar',
-    data: {
-      labels: barLabels,
-      datasets: [
-        { label:'Organic', data:oScores, backgroundColor:'rgba(46,125,50,0.75)', borderColor:'#2E7D32', borderWidth:1, borderRadius:4 },
-        { label:'UGC',     data:uScores, backgroundColor:'rgba(21,101,192,0.75)', borderColor:'#1565C0', borderWidth:1, borderRadius:4 }
-      ]
-    },
-    options: {
-      responsive:true, maintainAspectRatio:true, indexAxis:'y',
-      plugins: {
-        title:  { display:true, text:'Index Score by Metric  (100 = winner · lower always good on CPA/CPM/Eff.)', font:{size:12} },
-        legend: { position:'top' },
-        tooltip: { callbacks: { label: ctx => {
-          const i=ctx.dataIndex;
-          const actual = ctx.datasetIndex===0 ? oLabels[i] : uLabels[i];
-          return ctx.dataset.label+': '+actual+' (score: '+ctx.parsed.x+')';
-        }}}
-      },
-      scales: {
-        x: { min:0, max:105, ticks:{ callback:v=>v+'', font:{size:10} }, grid:{ color:'rgba(0,0,0,0.06)' } },
-        y: { ticks:{ font:{size:11} } }
-      }
-    }
-  });
+  const tableRows = rows.map(([label, oRaw, uRaw, oDisp, uDisp, low]) => {
+    const oWins = low ? (oRaw||0) <= (uRaw||0) : (oRaw||0) >= (uRaw||0);
+    const oCls  = oWins ? 'td-val win win-org' : 'td-val';
+    const uCls  = !oWins ? 'td-val win win-ugc' : 'td-val';
+    return `<tr>
+      <td class="td-metric">${label}</td>
+      <td class="${oCls}">${oDisp}</td>
+      <td class="${uCls}">${uDisp}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('ovugcTable').innerHTML = `
+    <table>
+      <thead><tr>
+        <th class="th-label"></th>
+        <th class="th-org">🟢 Organic</th>
+        <th class="th-ugc">🔵 UGC</th>
+      </tr></thead>
+      <tbody>${tableRows}</tbody>
+    </table>`;
 
   // ── Scatter: Spend vs NB ROAS, dot size capped ───────────────────────────
   const maxPur = Math.max(...all.map(c=>c.purchases||1), 1);
