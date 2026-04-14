@@ -822,7 +822,8 @@ function buildOvUGC() {
   const ugcCreators = all.filter(c => c.content_type === 'ugc' || c.content_type === 'both');
 
   function agg(list) {
-    let spend=0, revenue=0, purchases=0, impressions=0, tot_fee=0, tot_amortized=0, count=0, nb_nv=0, nb_visits=0;
+    let spend=0, revenue=0, purchases=0, impressions=0, tot_fee=0, tot_amortized=0, count=0;
+    let nb_nv=0, nb_visits=0, nb_rev=0, nb_spend=0;
     list.forEach(c => {
       spend      += c.spend||0;
       revenue    += c.revenue||0;
@@ -831,21 +832,24 @@ function buildOvUGC() {
       tot_fee    += c.content_fee||0;
       tot_amortized += c.amortized||0;
       count++;
-      // NB is all-time (no daily breakdown) — pull from NB_DATA via ad names
+      // NB is all-time — pull from NB_DATA via ad names
       const allAds = (c.jobs||[]).flatMap(j => j.ads||[]);
       const nb = getNbForAds(allAds);
       nb_nv    += nb.nv;
       nb_visits+= nb.visits;
+      nb_rev   += nb.rev;
+      nb_spend += nb.spend;
     });
     const eff_cost = tot_amortized > 0 ? tot_amortized : tot_fee;
     return {
       spend, revenue, purchases, impressions, tot_fee, count,
-      roas:        spend>0     ? revenue/spend       : 0,
-      cpa:         purchases>0 ? spend/purchases     : 0,
-      cpm:         impressions>0 ? spend/impressions*1000 : 0,
-      content_eff: spend>0     ? eff_cost/spend*100 : 0,
-      nb_new_pct:  nb_visits>0 ? nb_nv/nb_visits*100 : 0,
-      avg_fee:     count>0     ? tot_fee/count       : 0
+      roas:        spend>0      ? revenue/spend          : 0,
+      cpa:         purchases>0  ? spend/purchases        : 0,
+      cpm:         impressions>0? spend/impressions*1000 : 0,
+      content_eff: spend>0      ? eff_cost/spend*100     : 0,
+      nb_new_pct:  nb_visits>0  ? nb_nv/nb_visits*100    : 0,
+      nb_roas:     nb_spend>0   ? nb_rev/nb_spend        : 0,
+      avg_fee:     count>0      ? tot_fee/count          : 0
     };
   }
 
@@ -875,62 +879,85 @@ function buildOvUGC() {
   }
 
   document.getElementById('ovugcGrid').innerHTML = [
-    card('Creators',         o.count,       u.count,       o.count+' creators',             u.count+' creators'),
-    card('Total Spend',      o.spend,       u.spend,       fmtD(o.spend),                   fmtD(u.spend)),
-    card('ROAS',             o.roas,        u.roas,        fmtX2(o.roas),                   fmtX2(u.roas)),
-    card('CPA',              o.cpa,         u.cpa,         fmtD(o.cpa),                     fmtD(u.cpa),     true),
-    card('CPM',              o.cpm,         u.cpm,         '$'+o.cpm.toFixed(2),             '$'+u.cpm.toFixed(2), true),
-    card('Purchases',        o.purchases,   u.purchases,   (o.purchases||0).toLocaleString(),(u.purchases||0).toLocaleString()),
-    card('Content Eff.',     o.content_eff, u.content_eff, fmtP1(o.content_eff),            fmtP1(u.content_eff), true),
-    card('% New Visits (NB)',o.nb_new_pct,  u.nb_new_pct,  fmtP1(o.nb_new_pct),             fmtP1(u.nb_new_pct)),
-    card('Avg Content Fee',  u.avg_fee,     o.avg_fee,     fmtD(o.avg_fee),                 fmtD(u.avg_fee), true)
+    card('Creators',          o.count,       u.count,       o.count+' creators',              u.count+' creators'),
+    card('Total Spend',       o.spend,       u.spend,       fmtD(o.spend),                    fmtD(u.spend)),
+    card('ROAS (Northbeam)',  o.nb_roas,     u.nb_roas,     fmtX2(o.nb_roas),                 fmtX2(u.nb_roas)),
+    card('CPA',               o.cpa,         u.cpa,         fmtD(o.cpa),                      fmtD(u.cpa),     true),
+    card('CPM',               o.cpm,         u.cpm,         '$'+o.cpm.toFixed(2),              '$'+u.cpm.toFixed(2), true),
+    card('Purchases',         o.purchases,   u.purchases,   (o.purchases||0).toLocaleString(), (u.purchases||0).toLocaleString()),
+    card('Content Eff.',      o.content_eff, u.content_eff, fmtP1(o.content_eff),             fmtP1(u.content_eff), true),
+    card('% New Visits (NB)', o.nb_new_pct,  u.nb_new_pct,  fmtP1(o.nb_new_pct),              fmtP1(u.nb_new_pct)),
+    card('Avg Content Fee',   u.avg_fee,     o.avg_fee,     fmtD(o.avg_fee),                  fmtD(u.avg_fee), true)
   ].join('');
 
-  // ── Radar Chart ───────────────────────────────────────────────────────────
-  // Normalize each metric 0-100 where 100 = best performer on that axis
-  function norm(oV, uV, lowerBetter) {
-    const mx = Math.max(Math.abs(oV||0), Math.abs(uV||0)) || 1;
-    if (lowerBetter) return [uV>0?(1-(oV||0)/mx)*100:50, oV>0?(1-(uV||0)/mx)*100:50];
-    return [(oV||0)/mx*100, (uV||0)/mx*100];
-  }
-  const [oR,uR]   = norm(o.roas,        u.roas,        false);
-  const [oCp,uCp] = norm(o.cpa,         u.cpa,         true);
-  const [oCm,uCm] = norm(o.cpm,         u.cpm,         true);
-  const [oEf,uEf] = norm(o.content_eff, u.content_eff, true);
-  const [oNv,uNv] = norm(o.nb_new_pct,  u.nb_new_pct,  false);
-  const [oPu,uPu] = norm(o.purchases,   u.purchases,   false);
-
-  if (ovugcRadarChart) ovugcRadarChart.destroy();
-  ovugcRadarChart = new Chart(document.getElementById('ovugcRadarChart'), {
-    type: 'radar',
-    data: {
-      labels: ['ROAS','CPA Effic.','CPM Effic.','Content Effic.','% New Visits','Purchase Vol.'],
-      datasets: [
-        { label:'Organic', data:[oR,oCp,oCm,oEf,oNv,oPu],
-          borderColor:'#2E7D32', backgroundColor:'rgba(46,125,50,0.15)', borderWidth:2, pointBackgroundColor:'#2E7D32' },
-        { label:'UGC',     data:[uR,uCp,uCm,uEf,uNv,uPu],
-          borderColor:'#1565C0', backgroundColor:'rgba(21,101,192,0.15)', borderWidth:2, pointBackgroundColor:'#1565C0' }
-      ]
-    },
-    options: {
-      responsive:true, maintainAspectRatio:true,
-      plugins: {
-        title:   { display:true, text:'Performance Radar (normalized · higher = better)', font:{size:13} },
-        legend:  { position:'top' },
-        tooltip: { callbacks: { label: ctx => ctx.dataset.label+': '+ctx.parsed.r.toFixed(1)+' (normalized)' } }
-      },
-      scales: { r: { min:0, max:100, ticks:{ stepSize:25, font:{size:9} }, grid:{ color:'rgba(0,0,0,0.1)' } } }
+  // ── Index Bar Chart: winner = 100, loser = relative score ────────────────
+  // Shows actual values as data labels; bars are index scores so scales don't clash
+  const chartMetrics = [
+    { label:'ROAS (NB)',     oV:o.nb_roas,      uV:u.nb_roas,      low:false, fmt:v=>v.toFixed(2)+'x' },
+    { label:'CPA',           oV:o.cpa,           uV:u.cpa,           low:true,  fmt:v=>'$'+v.toFixed(0) },
+    { label:'CPM',           oV:o.cpm,           uV:u.cpm,           low:true,  fmt:v=>'$'+v.toFixed(2) },
+    { label:'Content Eff.%', oV:o.content_eff,   uV:u.content_eff,   low:true,  fmt:v=>v.toFixed(1)+'%' },
+    { label:'% New Visits',  oV:o.nb_new_pct,    uV:u.nb_new_pct,    low:false, fmt:v=>v.toFixed(1)+'%' },
+  ];
+  const barLabels=[]; const oScores=[]; const uScores=[]; const oLabels=[]; const uLabels=[];
+  chartMetrics.forEach(m => {
+    const ov=m.oV||0, uv=m.uV||0;
+    barLabels.push(m.label);
+    oLabels.push(m.fmt(ov)); uLabels.push(m.fmt(uv));
+    if (m.low) {
+      const mn=Math.min(ov,uv)||0.01;
+      oScores.push(Math.round(mn/(ov||0.01)*100));
+      uScores.push(Math.round(mn/(uv||0.01)*100));
+    } else {
+      const mx=Math.max(ov,uv)||0.01;
+      oScores.push(Math.round(ov/mx*100));
+      uScores.push(Math.round(uv/mx*100));
     }
   });
 
-  // ── Bubble Scatter: Spend vs ROAS, size = purchases ───────────────────────
+  if (ovugcRadarChart) ovugcRadarChart.destroy();
+  ovugcRadarChart = new Chart(document.getElementById('ovugcRadarChart'), {
+    type: 'bar',
+    data: {
+      labels: barLabels,
+      datasets: [
+        { label:'Organic', data:oScores, backgroundColor:'rgba(46,125,50,0.75)', borderColor:'#2E7D32', borderWidth:1, borderRadius:4 },
+        { label:'UGC',     data:uScores, backgroundColor:'rgba(21,101,192,0.75)', borderColor:'#1565C0', borderWidth:1, borderRadius:4 }
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:true, indexAxis:'y',
+      plugins: {
+        title:  { display:true, text:'Index Score by Metric  (100 = winner · lower always good on CPA/CPM/Eff.)', font:{size:12} },
+        legend: { position:'top' },
+        tooltip: { callbacks: { label: ctx => {
+          const i=ctx.dataIndex;
+          const actual = ctx.datasetIndex===0 ? oLabels[i] : uLabels[i];
+          return ctx.dataset.label+': '+actual+' (score: '+ctx.parsed.x+')';
+        }}}
+      },
+      scales: {
+        x: { min:0, max:105, ticks:{ callback:v=>v+'', font:{size:10} }, grid:{ color:'rgba(0,0,0,0.06)' } },
+        y: { ticks:{ font:{size:11} } }
+      }
+    }
+  });
+
+  // ── Scatter: Spend vs NB ROAS, dot size capped ───────────────────────────
+  const maxPur = Math.max(...all.map(c=>c.purchases||1), 1);
   function toScatter(list) {
-    return list.map(c => ({
-      x: c.spend||0,
-      y: c.roas||0,
-      r: Math.max(4, Math.sqrt((c.purchases||1)) * 1.5),
-      label: c.name||c.handle
-    }));
+    return list.map(c => {
+      const allAds=(c.jobs||[]).flatMap(j=>j.ads||[]);
+      const nb=getNbForAds(allAds);
+      const nbR = nb.spend>0 ? nb.rev/nb.spend : 0;
+      return {
+        x: c.spend||0,
+        y: nbR,
+        r: Math.max(5, Math.min(18, ((c.purchases||0)/maxPur)*18 + 4)),
+        label: c.name||c.handle,
+        metaRoas: c.roas||0
+      };
+    });
   }
   if (ovugcScatterChart) ovugcScatterChart.destroy();
   ovugcScatterChart = new Chart(document.getElementById('ovugcScatterChart'), {
@@ -938,24 +965,25 @@ function buildOvUGC() {
     data: {
       datasets: [
         { label:'Organic', data:toScatter(orgCreators),
-          backgroundColor:'rgba(46,125,50,0.55)', borderColor:'#2E7D32', borderWidth:1 },
+          backgroundColor:'rgba(46,125,50,0.6)', borderColor:'#2E7D32', borderWidth:1 },
         { label:'UGC',     data:toScatter(ugcCreators),
-          backgroundColor:'rgba(21,101,192,0.55)', borderColor:'#1565C0', borderWidth:1 }
+          backgroundColor:'rgba(21,101,192,0.6)', borderColor:'#1565C0', borderWidth:1 }
       ]
     },
     options: {
       responsive:true, maintainAspectRatio:true,
       plugins: {
-        title:  { display:true, text:'Spend vs ROAS by Creator', font:{size:13} },
+        title:  { display:true, text:'Spend vs NB ROAS by Creator  (bubble size = purchases)', font:{size:12} },
         legend: { position:'top' },
         tooltip: { callbacks: { label: ctx => {
           const d=ctx.raw;
-          return d.label+': $'+(d.x||0).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',')+' spend · '+(d.y||0).toFixed(2)+'x ROAS';
+          const sp='$'+(d.x||0).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g,',');
+          return [d.label, 'Spend: '+sp, 'NB ROAS: '+(d.y||0).toFixed(2)+'x', 'Meta ROAS: '+(d.metaRoas||0).toFixed(2)+'x'];
         }}}
       },
       scales: {
-        x: { title:{ display:true, text:'Meta Spend' }, ticks:{ callback:v=>'$'+(v/1000).toFixed(0)+'k', font:{size:10} } },
-        y: { title:{ display:true, text:'ROAS' }, ticks:{ font:{size:10} } }
+        x: { title:{display:true,text:'Meta Spend'}, ticks:{callback:v=>'$'+(v/1000).toFixed(0)+'k',font:{size:10}} },
+        y: { title:{display:true,text:'NB ROAS (Northbeam)'}, ticks:{font:{size:10}} }
       }
     }
   });
