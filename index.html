@@ -822,7 +822,7 @@ function buildOvUGC() {
   const ugcCreators = all.filter(c => c.content_type === 'ugc' || c.content_type === 'both');
 
   function agg(list) {
-    let spend=0, revenue=0, purchases=0, impressions=0, tot_fee=0, tot_amortized=0, count=0;
+    let spend=0, revenue=0, purchases=0, impressions=0, tot_fee=0, eff_cost_sum=0, count=0;
     let nb_nv=0, nb_visits=0, nb_rev=0, nb_spend=0;
     list.forEach(c => {
       spend      += c.spend||0;
@@ -830,8 +830,11 @@ function buildOvUGC() {
       purchases  += c.purchases||0;
       impressions+= c.impressions||0;
       tot_fee    += c.content_fee||0;
-      tot_amortized += c.amortized||0;
       count++;
+      // Per-creator: use amortized if set, else fall back to content_fee
+      // Mirrors getFilteredCreators() effCost logic exactly
+      const cTotalCost = c.total_cost || c.content_fee || 0;
+      eff_cost_sum += (c.amortized > 0) ? c.amortized : cTotalCost;
       // NB is all-time — pull from NB_DATA via ad names
       const allAds = (c.jobs||[]).flatMap(j => j.ads||[]);
       const nb = getNbForAds(allAds);
@@ -840,16 +843,15 @@ function buildOvUGC() {
       nb_rev   += nb.rev;
       nb_spend += nb.spend;
     });
-    const eff_cost = tot_amortized > 0 ? tot_amortized : tot_fee;
     return {
       spend, revenue, purchases, impressions, tot_fee, count,
-      roas:        spend>0      ? revenue/spend          : 0,
-      cpa:         purchases>0  ? spend/purchases        : 0,
-      cpm:         impressions>0? spend/impressions*1000 : 0,
-      content_eff: spend>0      ? eff_cost/spend*100     : 0,
-      nb_new_pct:  nb_visits>0  ? nb_nv/nb_visits*100    : 0,
-      nb_roas:     nb_spend>0   ? nb_rev/nb_spend        : 0,
-      avg_fee:     count>0      ? tot_fee/count          : 0
+      roas:        spend>0      ? revenue/spend            : 0,
+      cpa:         purchases>0  ? spend/purchases          : 0,
+      cpm:         impressions>0? spend/impressions*1000   : 0,
+      content_eff: spend>0      ? eff_cost_sum/spend*100   : 0,
+      nb_new_pct:  nb_visits>0  ? nb_nv/nb_visits*100      : 0,
+      nb_roas:     nb_spend>0   ? nb_rev/nb_spend          : 0,
+      avg_fee:     count>0      ? tot_fee/count            : 0
     };
   }
 
