@@ -466,7 +466,7 @@ function renderCreatorTable() {
       <td style="font-weight:600;color:${roasColor}">${fmtX(c.roas)}</td>
       <td>${fmt$2(c.cpa)}</td><td>${fmt$2(c.cpm)}</td><td>${fmtP(c.ctr)}</td>
       <td style="background:rgba(180,136,11,0.06);font-weight:600;color:${nbRoasColor}">${cNb.rev>0?fmtX(cNbRoas):'--'}</td>
-      <td style="background:rgba(180,136,11,0.06);font-weight:600;color:${cNb.rev>0?(cNbRoas/HAUS_INC_FACTOR>=0.6?'var(--green)':cNbRoas/HAUS_INC_FACTOR>=0.5?'var(--yellow)':'var(--red)'):'var(--dark-light)'}">${cNb.rev>0?fmtX(cNbRoas/HAUS_INC_FACTOR):'--'}</td>
+      <td style="background:rgba(180,136,11,0.06);font-weight:600;color:${cNb.rev>0?(cNbRoas*HAUS_INC_FACTOR>=0.6?'var(--green)':cNbRoas*HAUS_INC_FACTOR>=0.5?'var(--yellow)':'var(--red)'):'var(--dark-light)'}">${cNb.rev>0?fmtX(cNbRoas*HAUS_INC_FACTOR):'--'}</td>
       <td style="background:rgba(180,136,11,0.06)">${cNb.visits>0?fmtP(cNbNewPct):'--'}</td>
       <td>${c.days_live}</td><td><span class="status-dot ${sc}"></span> ${se}</td>
     </tr>`;
@@ -506,7 +506,7 @@ function renderCreatorTable() {
         <td>${job.spend>0?fmt$2(job.cpm||0):'--'}</td>
         <td>${job.spend>0?fmtP(job.ctr||0):'--'}</td>
         <td style="background:rgba(180,136,11,0.06);color:${jNbRoasColor}">${jNb.rev>0?fmtX(jNbRoas):'--'}</td>
-        <td style="background:rgba(180,136,11,0.06);color:${jNb.rev>0?(jNbRoas/HAUS_INC_FACTOR>=0.6?'var(--green)':jNbRoas/HAUS_INC_FACTOR>=0.5?'var(--yellow)':'var(--red)'):'var(--dark-light)'}">${jNb.rev>0?fmtX(jNbRoas/HAUS_INC_FACTOR):'--'}</td>
+        <td style="background:rgba(180,136,11,0.06);color:${jNb.rev>0?(jNbRoas*HAUS_INC_FACTOR>=0.6?'var(--green)':jNbRoas*HAUS_INC_FACTOR>=0.5?'var(--yellow)':'var(--red)'):'var(--dark-light)'}">${jNb.rev>0?fmtX(jNbRoas*HAUS_INC_FACTOR):'--'}</td>
         <td style="background:rgba(180,136,11,0.06)">${jNb.visits>0?fmtP(jNbNewPct):'--'}</td>
         <td style="background:rgba(26,42,58,0.06)"></td>
         <td style="background:rgba(26,42,58,0.06)"></td>
@@ -537,7 +537,7 @@ function renderCreatorTable() {
           <td style="${adStyle}">${ad.spend>0?(ad.cpm?fmt$2(ad.cpm):'--'):'--'}</td>
           <td style="${adStyle}">${ad.spend>0?(ad.ctr?fmtP(ad.ctr):'--'):'--'}</td>
           <td style="${adStyle};background:rgba(180,136,11,0.06);color:${adNbRoasColor}">${aNb.rev>0?fmtX(aNbRoas):'--'}</td>
-          <td style="${adStyle};background:rgba(180,136,11,0.06);color:${aNb.rev>0?(aNbRoas/HAUS_INC_FACTOR>=0.6?'var(--green)':aNbRoas/HAUS_INC_FACTOR>=0.5?'var(--yellow)':'var(--red)'):'var(--dark-light)'}">${aNb.rev>0?fmtX(aNbRoas/HAUS_INC_FACTOR):'--'}</td>
+          <td style="${adStyle};background:rgba(180,136,11,0.06);color:${aNb.rev>0?(aNbRoas*HAUS_INC_FACTOR>=0.6?'var(--green)':aNbRoas*HAUS_INC_FACTOR>=0.5?'var(--yellow)':'var(--red)'):'var(--dark-light)'}">${aNb.rev>0?fmtX(aNbRoas*HAUS_INC_FACTOR):'--'}</td>
           <td style="${adStyle};background:rgba(180,136,11,0.06)">${aNb.visits>0?fmtP(aNbNewPct):'--'}</td>
           <td style="background:rgba(26,42,58,0.06)" colspan="3"></td>
           <td colspan="2"></td>
@@ -752,7 +752,7 @@ function renderNbKPIs() {
   const nNewPct = nbNewPct(nb);
   const cards = [
     {label:'NB ROAS (1d, New)', value: nb.rev>0 ? fmtX(nRoas) : '--'},
-    {label:'iROAS (Haus Adj.)', value: nb.rev>0 ? fmtX(nRoas/HAUS_INC_FACTOR) : '--'},
+    {label:'iROAS (Haus Adj.)', value: nb.rev>0 ? fmtX(nRoas*HAUS_INC_FACTOR) : '--'},
     {label:'% Visits (New)', value: nb.visits>0 ? fmtP(nNewPct) : '--'},
     {label:'NB Revenue (New)', value: fmt$(nb.rev)},
     {label:'NB Orders (New)', value: fmtN(nb.txn)},
