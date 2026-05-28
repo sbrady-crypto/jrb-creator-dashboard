@@ -645,11 +645,14 @@ function renderSourceBreakdown() {
   const totalSpend = creators.reduce((s,c) => s+(c.spend||0), 0);
   const groups = {};
   creators.forEach(c => {
-    const src = (c.agency && c.agency.trim()) ? c.agency.trim() : '(Unspecified)';
+    let src = (c.agency && c.agency.trim()) ? c.agency.trim() : '';
+    // Infer Agentio from pct_of_spend signature (Agentio = 20% of spend, per CSV)
+    if (!src && c.pct_of_spend === 20) src = 'Agentio';
+    if (!src) src = '(Unspecified)';
     if (!groups[src]) groups[src] = { source: src, creators: 0, content_fees: 0, spend: 0, purchases: 0, revenue: 0, nb_rev: 0, nb_spend: 0, eff_cost_sum: 0, eff_spend_sum: 0 };
     const g = groups[src];
     g.creators++;
-    g.content_fees += c.content_fee || c.total_cost || 0;
+    g.content_fees += c.total_cost || c.content_fee || 0;
     g.spend += c.spend || 0;
     g.purchases += c.purchases || 0;
     g.revenue += c.revenue || 0;
