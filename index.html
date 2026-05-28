@@ -640,19 +640,36 @@ function renderProductTable() {
   </tr>`).join('');
 }
 
+// Agentio handle -> pct of spend (sourced from "New Master" Google Sheet 2026-05-28).
+// Overrides stale agency/pct in baked CREATORS data. New Agentio = 10%, old = 20%, no flat fee.
+const AGENTIO_PCT = {
+  // 20% (older cohort)
+  'bjonesstyle':20,'bitsofbri':20,'beckyrmoss':20,'blairblogs':20,'jazminegarcia':20,
+  'julie_khuu':20,'lucy_lumen':20,'msgoldgirl':20,'graymatsen':20,'graceinmyspace':20,
+  'torimasters':20,'jasminejade':20,'jackiewyers':20,'kyrareneevlogs':20,'ssssamanthaa':20,
+  't.beaston':20,'blairwalnuts':20,'clancyburke':20,
+  // 10% (newer cohort)
+  'nikkiburdine':10,'annadreid':10,'thelindseyexperience':10,'melissagisoni':10,
+  'foreverjenypher':10,'hangingwiththeholcombs':10,'pretty_distressed':10,
+  'wellwithraele':10,'kennellymichelle':10,'wandalovessharing':10,'jenjeanpierre':10
+};
+
 function renderSourceBreakdown() {
   const creators = getFilteredCreators();
   const totalSpend = creators.reduce((s,c) => s+(c.spend||0), 0);
   const groups = {};
   creators.forEach(c => {
     let src = (c.agency && c.agency.trim()) ? c.agency.trim() : '';
-    // Infer Agentio from pct_of_spend signature (Agentio = 20% of spend, per CSV)
-    if (!src && c.pct_of_spend === 20) src = 'Agentio';
+    const agentioPct = AGENTIO_PCT[c.handle];
+    if (agentioPct) src = 'Agentio';
+    else if (!src && c.pct_of_spend === 20) src = 'Agentio';
     if (!src) src = '(Unspecified)';
     if (!groups[src]) groups[src] = { source: src, creators: 0, content_fees: 0, spend: 0, purchases: 0, revenue: 0, nb_rev: 0, nb_spend: 0, eff_cost_sum: 0, eff_spend_sum: 0 };
     const g = groups[src];
     g.creators++;
-    g.content_fees += c.total_cost || c.content_fee || 0;
+    // Agentio = pct of spend only (no flat fee). Else use total_cost.
+    g.content_fees += agentioPct ? (agentioPct/100) * (c.spend||0)
+                                 : (c.total_cost || c.content_fee || 0);
     g.spend += c.spend || 0;
     g.purchases += c.purchases || 0;
     g.revenue += c.revenue || 0;
