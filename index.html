@@ -180,6 +180,23 @@ tbody tr:hover { background:var(--cream); }
   <div class="section"><div class="section-title">Partnership vs BAU Comparison</div><div class="comparison-grid" id="compGrid"></div>
     <div class="chart-row" style="margin-top:14px;"><div class="chart-container"><canvas id="spendTrendChart"></canvas></div><div class="chart-container"><canvas id="roasTrendChart"></canvas></div></div>
   </div>
+  <div class="section"><div class="section-title">Performance by Source</div>
+    <div class="table-wrapper"><div style="overflow-x:auto;">
+      <table id="sourceTable"><thead><tr>
+        <th>Source</th>
+        <th>Creators</th>
+        <th>Content Fees</th>
+        <th>Spend</th>
+        <th>% of Partnership Spend</th>
+        <th>Purchases</th>
+        <th>Revenue</th>
+        <th>ROAS</th>
+        <th>CPA</th>
+        <th style="background:#2d2926;color:#D4A84B">NB ROAS<br><span style="font-size:9px;font-weight:400">(1d, New)</span></th>
+        <th style="background:#2a2318;color:#C4A35A">Content Eff.</th>
+      </tr></thead><tbody id="sourceBody"></tbody></table>
+    </div></div>
+  </div>
   <div class="section"><div class="section-title">Creator Scorecard</div>
     <div class="table-wrapper">
       <div class="filter-bar">
@@ -623,6 +640,55 @@ function renderProductTable() {
   </tr>`).join('');
 }
 
+function renderSourceBreakdown() {
+  const creators = getFilteredCreators();
+  const totalSpend = creators.reduce((s,c) => s+(c.spend||0), 0);
+  const groups = {};
+  creators.forEach(c => {
+    const src = (c.agency && c.agency.trim()) ? c.agency.trim() : '(Unspecified)';
+    if (!groups[src]) groups[src] = { source: src, creators: 0, content_fees: 0, spend: 0, purchases: 0, revenue: 0, nb_rev: 0, nb_spend: 0, eff_cost_sum: 0, eff_spend_sum: 0 };
+    const g = groups[src];
+    g.creators++;
+    g.content_fees += c.content_fee || c.total_cost || 0;
+    g.spend += c.spend || 0;
+    g.purchases += c.purchases || 0;
+    g.revenue += c.revenue || 0;
+    const allAds = (c.jobs||[]).flatMap(j => j.ads||[]);
+    const nb = getNbForAds(allAds);
+    g.nb_rev += nb.rev;
+    g.nb_spend += nb.spend;
+    const orig = CREATORS.find(o => o.handle === c.handle) || c;
+    const origSpend = orig.spend || 0;
+    const origCost  = orig.total_cost || orig.content_fee || 0;
+    if (origSpend > 0 && origCost > 0) {
+      g.eff_cost_sum  += origCost;
+      g.eff_spend_sum += origSpend;
+    }
+  });
+  const rows = Object.values(groups).map(g => ({
+    ...g,
+    pct_spend: totalSpend ? g.spend/totalSpend*100 : 0,
+    roas: g.spend ? g.revenue / g.spend : 0,
+    cpa: g.purchases ? g.spend / g.purchases : 0,
+    nb_roas: g.nb_spend ? g.nb_rev / g.nb_spend : 0,
+    content_efficiency: g.eff_spend_sum > 0 ? g.eff_cost_sum / g.eff_spend_sum * 100 : 0
+  })).sort((a,b) => b.spend - a.spend);
+  const tbody = document.getElementById('sourceBody');
+  tbody.innerHTML = rows.map(r => `<tr>
+    <td style="font-weight:600">${r.source}</td>
+    <td>${fmtN(r.creators)}</td>
+    <td>${fmt$(r.content_fees)}</td>
+    <td>${fmt$(r.spend)}</td>
+    <td>${fmtP(r.pct_spend)}</td>
+    <td>${fmtN(r.purchases)}</td>
+    <td>${fmt$(r.revenue)}</td>
+    <td style="color:${r.roas>=1?'var(--green)':'var(--red)'};font-weight:600">${fmtX(r.roas)}</td>
+    <td>${fmt$2(r.cpa)}</td>
+    <td>${r.nb_roas>0?fmtX(r.nb_roas):'--'}</td>
+    <td>${fmtP(r.content_efficiency)}</td>
+  </tr>`).join('');
+}
+
 function renderTopBottom() {
   const creators = getFilteredCreators().filter(c => c.spend > 500);
   const byRoas = [...creators].sort((a,b) => b.roas - a.roas);
@@ -985,7 +1051,7 @@ function buildOvUGC() {
 }
 
 function renderAll() {
-  buildOvUGC(); renderKPIs(); renderComparison(); renderTrendCharts(); renderCreatorTable();
+  buildOvUGC(); renderKPIs(); renderComparison(); renderTrendCharts(); renderSourceBreakdown(); renderCreatorTable();
   renderProductTable(); renderTopBottom(); renderHeatmap(); renderCreatorTrends();
   renderDecisionMatrix(); renderPCMatrix(); renderAmort(); renderNbKPIs(); renderGA4();
 }
